@@ -1,0 +1,28 @@
+{
+  "name": "johhat.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/johhat/johhat.github.io",
+  "authors": [
+    "Johan Hatleskog <johan.hatleskog@gmail.com>"
+  ],
+  "description": "Yet another github pages page",
+  "main": "index.html",
+  "keywords": [
+    "static",
+    "page"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "components-font-awesome": "~4.3.0",
+    "jquery.localScroll": "~1.4.0"
+  }
+}

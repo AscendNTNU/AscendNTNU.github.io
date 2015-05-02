@@ -1,0 +1,30 @@
+{
+  "name": "johhat.github.io",
+  "version": "1.0.0",
+  "description": "Yet another github pages page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johhat/johhat.github.io.git"
+  },
+  "keywords": [
+    "ruby",
+    "jekyll",
+    "static"
+  ],
+  "author": "Johan Hatleskog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johhat/johhat.github.io/issues"
+  },
+  "homepage": "https://github.com/johhat/johhat.github.io",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-include-source": "^0.5.1"
+  },
+  "dependencies": {}
+}
