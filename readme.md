@@ -5,7 +5,7 @@ A github pages test - in early stages of development. It is based on the standar
 2. Use command `bundle exec jekyll serve` when in the project root.
 
 #To continue developing:
-1. Install client side dependencies using Bower
+1. Install client side dependencies using Bower and dev dependencies using npm
 2. Add dependencies to js folder using grunt
 
 [gh-pages-jekyll-guide]: https://help.github.com/articles/using-jekyll-with-pages/
