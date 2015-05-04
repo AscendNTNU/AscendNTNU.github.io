@@ -5,7 +5,7 @@ email: post@lorem-ipsum.me
 #Description will appear in the document head meta (for
 #Google search results) and in your feed.xml site description.
 description: > # this means to ignore newlines until "baseurl:"
-  Lorem ipsum team is dedicated to the progress of lorem ipsum. Out mission 
+  Lorem ipsum team is dedicated to the progress of lorem ipsum. Our mission 
   is to use lorem ipsum to make progress within the field of lorem ipsum.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
@@ -13,4 +13,4 @@ github_username:  johhat
 
 # Build settings
 markdown: kramdown
-exclude: [bower_components,readme.md,blog.sublime-project,blog.sublime-workspace,bower.json,config.json,Gruntfile.js]
+exclude: [package.json,less,js,node_modules,bower_components,readme.md,blog.sublime-project,blog.sublime-workspace,bower.json,config.json,gulpfile.js,notes.txt]
