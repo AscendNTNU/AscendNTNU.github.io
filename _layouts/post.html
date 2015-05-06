@@ -12,6 +12,12 @@ layout: default
 		  <article>
 		    {{ content }}
 		  </article>
+		  	<nav>
+			  <ul class="pager">
+			    <li class="previous"><a href="{{page.previous.url| prepend: site.baseurl}}"><span aria-hidden="true">&larr;</span> Older</a></li>
+			    <li class="next"><a href="{{page.next.url| prepend: site.baseurl}}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+			  </ul>
+			</nav>
 		</div>
 	</div>
 </div>

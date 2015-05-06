@@ -2,6 +2,10 @@
 layout: default
 title: Home
 ---
+<div id="color-patch">
+  <!--This is here to hide body background on nav animate-->
+</div>
+
 <div id="headerwrap">
   <div class="container"> 
       <div class="row centered">
@@ -27,24 +31,28 @@ title: Home
 <div id="newswrap">
   <div class="container">
     <div class="row col-md-12">
-      <h2>News</h2>
+      <h2>Recent posts</h2>
       <ul class="list-unstyled">
         {% for post in site.posts %}
           <li>
-            <h5>
+            <h3>
               <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-            </h5>
-            <p>{{ post.excerpt }}</p>
+            </h3>
+            <p>
+              {{ post.excerpt }}
+              <small><a href="{{ post.url | prepend: site.baseurl }}">Read more</a></small>
+            </p>
           </li>
         {% endfor %}
       </ul>
+      <p class="text-muted"><a href="#">More posts</a></p>
       <p class="text-muted">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
     </div>
   </div>
 </div>
 
-<section class="section">
+<section class="values">
   <div class="container">
     <div class="row centered">
       <div class="col-lg-4" >

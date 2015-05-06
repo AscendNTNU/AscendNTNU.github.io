@@ -32,6 +32,18 @@ var params = {
 		'./bower_components/bootstrap/dist/js/bootstrap.js',
 		'./bower_components/instantclick/instantclick.js',
 		'./js/**/*.js'
+	],
+	lessPaths: [
+	    //Add less folder dependencies here - and use imports in main.less
+	    //The main less folder (./less) is included by default
+		'./bower_components/bootstrap/less/',
+        './bower_components/font-awesome/less/',
+        './node_modules/colors.css/less/'
+    ],
+    fonts: [
+		//Add font dependencies here
+		'./bower_components/bootstrap/fonts/*',
+		'./bower_components/font-awesome/fonts/*'
 	]
 };
 
@@ -60,24 +72,16 @@ gulp.task('js-production',['clean-js'],function() {
 });
 
 gulp.task('fonts',['clean-fonts'],function () {
-	return gulp.src([
-		//Add font dependencies here
-		'./bower_components/bootstrap/fonts/*',
-		'./bower_components/font-awesome/fonts/*'],
-		{base:'./'})
+	return gulp.src(params.fonts,{base:'./'})
 		.pipe(flatten())
 		.pipe(gulp.dest('./public/fonts'));
 });
 
-//@TODO: onError: browserSync.notify
+//@TODO: browserSync.notify when error occurs
 gulp.task('less',['clean-css','fonts'],function() {
     return gulp.src('./less/main.less')
         .pipe(sourcemaps.init())
-        .pipe(less({
-        	//Add less folder dependencies here - and use imports in main.less
-        	paths:['./bower_components/bootstrap/less/',
-        			'./bower_components/font-awesome/less/']
-        }))
+        .pipe(less({paths:params.lessPaths}))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./_site/public/css'))
@@ -89,11 +93,7 @@ gulp.task('less',['clean-css','fonts'],function() {
 //@TODO: Add header after minification
 gulp.task('less-production',['clean-css'],function() {
     return gulp.src('./less/main.less')
-        .pipe(less({
-        	//Add less folder dependencies here - and use imports in main.less
-        	paths:['./bower_components/bootstrap/less/',
-        			'./bower_components/font-awesome/less/']
-        }))
+        .pipe(less({paths:params.lessPaths}))
         .pipe(autoprefixer())
         .pipe(size({title:'css-size before minification'}))
         .pipe(minifyCss())
@@ -115,6 +115,7 @@ gulp.task('clean-css',function (cb) {
 
 /*
 	Jekyll build tasks
+	@TODO: Remove duplicate code, eg. using lazypipe
 */
 
 gulp.task('jekyll-build-production',['js-production','less-production','fonts'], function (done) {
@@ -123,7 +124,7 @@ gulp.task('jekyll-build-production',['js-production','less-production','fonts'],
         .on('close', done);
 });
 
-//Added initial build to avoid race condition - @TODO: Remove duplicate code, eg. using lazypipe
+//This task is needed to avoid race condition
 gulp.task('jekyll-initial-build',['js','less','fonts'], function (done) {
     browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
     return cp.spawn('bundle',['exec','jekyll','build'], {stdio: 'inherit'})

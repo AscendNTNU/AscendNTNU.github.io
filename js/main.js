@@ -3,4 +3,11 @@
 //Instantclick breaks browsersync..
 //InstantClick.init();
 
-console.log('JS loaded');
+$(window).scroll(function() {
+if ($(this).scrollTop() > 60){  
+    $('#navigation').addClass("smallnav");
+  }
+  else{
+    $('#navigation').removeClass("smallnav");
+  }
+});

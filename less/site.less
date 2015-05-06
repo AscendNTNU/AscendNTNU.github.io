@@ -1,41 +1,17 @@
-/* Sticky footer styles - not responsive TODO
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body{
-  margin-bottom: 300px;
-}
-
-.footer {
-  padding-top: 40px;
-  padding-bottom: 10px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;  
-  height: 300px;
-}
-
-.icon {
-  width: 1em;
-  height: 1em;
-}
-
 /* Pratt bootstrap template styles
 -------------------------------------------------- */
+@bg-header: #34495e;
 
 body {
-  background-color: #f2f2f2;
-    font-family: "Lato";
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-    padding-top: 50px;
-
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+  background-color: #f2ff2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #343434;
+  padding-top: 50px;
+  font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  overflow-scrolling: touch;
 }
 
 /* Titles */
@@ -45,38 +21,25 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
 }
 
-
-/* Paragraph & Typographic */
-p {
-    line-height: 28px;
-    margin-bottom: 25px;
-}
-
 .centered {
     text-align: center;
 }
 
 /* Links */
 a {
-    color: #3bc492;
+    color: #278261;
     word-wrap: break-word;
-
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 a:hover,
 a:focus {
-    color: #c0392b;
+    color: #2D9868;
     text-decoration: none;
     outline: 0;
 }
 
-a:before,
-a:after {
-    transition: color 0.1s ease-in, background 0.1s ease-in;
-}
-
- hr {
+hr {
     display: block;
     height: 1px;
     border: 0;
@@ -85,79 +48,81 @@ a:after {
     padding: 0;
 }
 
-
-/* ==========================================================================
-   Wrap Sections
-   ========================================================================== */
-
 #headerwrap {
-  background-color: #34495e;
-  padding-top: 60px;
+  background-color: @bg-header;
+  padding: 60px 0;
   color: white;
+  border-bottom: #bdc3c7 solid 5px;
+}
+
+#headerwrap p {
+  line-height: 28px;
 }
 
 #headerwrap h1 {
   margin-top: 30px;
-  color: white;
   font-size: 70px;
+  color: inherit;
 }
-
-#headerwrap h3 {
-  color: white;
-  font-size: 30px;
-}
-
-#headerwrap h5 {
-  color: white;
-  font-weight: 700;
-  text-align: left;
-}
-
-#headerwrap p {
-  color: white
-}
-
-/* intro Wrap */
 
 #newswrap {
-  padding-top: 50px;
-  border-top: #bdc3c7 solid 5px;
+  padding: 50px 0;
 }
 
-#features {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.values {
+  background-color: @bg-header;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-#features .ac a{
-  font-size: 20px;
-}
-
-/* Showcase Wrap */
-
-#showcase {
-  display: block;
-  background-color: #34495e;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-#showcase h1 {
+.values h4 {
   color: white;
 }
 
-#footerwrap {
+.footer {
   background-color: #2f2f2f;
   color: white;
-  text-align: left;
 }
 
-#footerwrap h3 {
-  font-size: 28px;
-  color: white;
+.navbar-default {
+  transition: min-height 0.3s ease;
+}
+.navbar-default .navbar-brand {
+  transition: padding-top 0.3s ease, height 0.3s ease;
+}
+.navbar-default .navbar-nav > li > a {
+    transition: padding 0.3s ease;
+}
+.smallnav {
+  min-height: 30px;
+}
+.smallnav .navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 30px;
+}
+.smallnav .navbar-nav > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-#footerwrap p {
-  color: white;
-  font-size: 18px;
+.navbar-default .navbar-toggle {
+  transition: padding 0.3s ease, margin 0.3s ease;
+}
+
+.smallnav .navbar-toggle {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#color-patch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;//Nav-height
+  background-color: @bg-header;//Same as following content
 }

@@ -16,10 +16,10 @@
         <!--Links to same page-->
         {% if page.title == 'Home' %}
         <li data-toggle="collapse" data-target=".navbar-collapse.in" class="active"><a href="#home" class="smothscroll">Home</a></li>
-        <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#news" class="smothscroll">News</a></li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#news" class="smothscroll">Recent posts</a></li>
         {% else %}
         <li><a href="/#home">Home</a></li>
-        <li><a href="/#news">News</a></li>
+        <li><a href="/#news">Recent posts</a></li>
         {% endif%}
         <!--Links to new pages-->
         {% for p in site.pages %}{% if p.title != 'Home' %}<li class="{% if p.title == page.title %}active{% endif %}"><a 
