@@ -15,8 +15,8 @@
       <ul class="nav navbar-nav navbar-right">
         <!--Links to same page-->
         {% if page.title == 'Home' %}
-        <li data-toggle="collapse" data-target=".navbar-collapse.in" class="active"><a href="#home" class="smothscroll">Home</a></li>
-        <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="#news" class="smothscroll">Recent posts</a></li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.in" class="active"><a data-scroll href="#home" class="smothscroll">Home</a></li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.in"><a data-scroll href="#news" class="smothscroll">Recent posts</a></li>
         {% else %}
         <li><a href="/#home">Home</a></li>
         <li><a href="/#news">Recent posts</a></li>

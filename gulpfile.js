@@ -16,6 +16,7 @@ var gulp        = require('gulp'),
 	googlecdn = require('gulp-google-cdn');
 
 //@TODO: Check out advantages with incremental builds. 
+//@TODO: Add auto versioning using gulp-rev
 
 //@TODO: Replace js with CDN for bootstrap.js, jQuery, same for css font-awesome Note: Bootstrap social is only dependent on bootstrap.
 gulp.task('cdn', function () {
@@ -24,24 +25,24 @@ gulp.task('cdn', function () {
         .pipe(gulp.dest('public'));
 });
 
-//Add external dependencies to params
-var params = {
-	jsPaths: [ 
+//Add paths to dependencies
+var paths = {
+	js: [ 
 		//Note: order matters - the files will be concated in order of appearance
 		'./bower_components/jquery/dist/jquery.js',
 		'./bower_components/bootstrap/dist/js/bootstrap.js',
 		'./bower_components/instantclick/instantclick.js',
+		'./bower_components/smooth-scroll/dist/js/smooth-scroll.js',
+		'./bower_components/scrollReveal.js/dist/scrollReveal.js',
 		'./js/**/*.js'
 	],
-	lessPaths: [
-	    //Add less folder dependencies here - and use imports in main.less
+	less: [
 	    //The main less folder (./less) is included by default
 		'./bower_components/bootstrap/less/',
         './bower_components/font-awesome/less/',
         './node_modules/colors.css/less/'
     ],
     fonts: [
-		//Add font dependencies here
 		'./bower_components/bootstrap/fonts/*',
 		'./bower_components/font-awesome/fonts/*'
 	]
@@ -52,7 +53,7 @@ var params = {
 */
 
 gulp.task('js',['clean-js'],function() {
-	return gulp.src(params.jsPaths,{base:'./'})
+	return gulp.src(paths.js,{base:'./'})
 		.pipe(sourcemaps.init())
 		.pipe(concat('bundle.js'))
 		.pipe(sourcemaps.write())
@@ -63,7 +64,7 @@ gulp.task('js',['clean-js'],function() {
 
 //@TODO: Add header after minification
 gulp.task('js-production',['clean-js'],function() {
-	return gulp.src(params.jsPaths,{base:'./'})
+	return gulp.src(paths.js,{base:'./'})
 		.pipe(concat('bundle.js'))
 		.pipe(size({title:'js-size before minification'}))
 		.pipe(uglify())
@@ -72,7 +73,7 @@ gulp.task('js-production',['clean-js'],function() {
 });
 
 gulp.task('fonts',['clean-fonts'],function () {
-	return gulp.src(params.fonts,{base:'./'})
+	return gulp.src(paths.fonts,{base:'./'})
 		.pipe(flatten())
 		.pipe(gulp.dest('./public/fonts'));
 });
@@ -81,7 +82,7 @@ gulp.task('fonts',['clean-fonts'],function () {
 gulp.task('less',['clean-css','fonts'],function() {
     return gulp.src('./less/main.less')
         .pipe(sourcemaps.init())
-        .pipe(less({paths:params.lessPaths}))
+        .pipe(less({paths:paths.less}))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./_site/public/css'))
@@ -93,7 +94,7 @@ gulp.task('less',['clean-css','fonts'],function() {
 //@TODO: Add header after minification
 gulp.task('less-production',['clean-css'],function() {
     return gulp.src('./less/main.less')
-        .pipe(less({paths:params.lessPaths}))
+        .pipe(less({paths:paths.less}))
         .pipe(autoprefixer())
         .pipe(size({title:'css-size before minification'}))
         .pipe(minifyCss())
@@ -112,6 +113,20 @@ gulp.task('clean-fonts',function (cb) {
 gulp.task('clean-css',function (cb) {
 	del(['./public/css/*'],cb);//Use callback, cb,  to ensure its finished
 });
+
+/*
+//@TODO: Finish, and put into flow
+gulp.taks('assets-dev',['js','less','fonts'],function () {
+	//Make two separate rev manifests - OR just name them name-dev.js and name-dev.css.
+	//In dev, only needed once. How to test?
+	//Inject js and css
+});
+
+//@TODO: Finish, and put into flow
+gulp.task('assets-production',['js-production','less-production','fonts'],function () {
+	//Make two separate rev manifests
+	//Inject js and css
+});*/
 
 /*
 	Jekyll build tasks
