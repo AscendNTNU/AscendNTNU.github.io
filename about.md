@@ -3,8 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-We are lorem ipsum team. We simply love lorem ipsum, and are dedicated to making you love it to.
+Ascend is the team representing the [Norwegian University Of Science and Technology][1] (NTNU) in the [International Aerial Robotics Competition][2]. Ascend was founded during the spring of 2015, and we aim on attending our first competition in 2016.
 
-Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+[1]: http://www.ntnu.edu/
+[2]: http://www.aerialroboticscompetition.org/

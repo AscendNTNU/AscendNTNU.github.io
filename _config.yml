@@ -1,15 +1,16 @@
 # Site settings
-title: LIT
-long_title: Lorem Ipsum Team
-email: post@lorem-ipsum.me
+title: Ascend
+long_title: Ascend
+email: ""
 #Description will appear in the document head meta (for
 #Google search results) and in your feed.xml site description.
 description: > # this means to ignore newlines until "baseurl:"
-  Lorem ipsum team is dedicated to the progress of lorem ipsum. Our mission 
-  is to use lorem ipsum to make progress within the field of lorem ipsum.
+  Autonomus aerial robotics for fun and learning. 
+  Ascend is The Norwegian University of Science and Technology's team in 
+  the International Aerial Robotics Competition (IARC).
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-github_username:  johhat
+url: "http://ascendntnu.github.com" # the base hostname & protocol for your site
+github_username:  ascendntnu
 
 # Build settings
 markdown: kramdown

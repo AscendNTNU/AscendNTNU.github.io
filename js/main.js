@@ -1,6 +1,6 @@
 /*Main application entrypoint*/
-function main() {
-
+(function() {
+	
 	'use stict';
 
 	//Add class to reduce nav size
@@ -13,11 +13,7 @@ function main() {
 	  }
 	});
 	
-	//Instantclick breaks browsersync..
-	//InstantClick.init();
 	smoothScroll.init();
 
 	window.sr = new scrollReveal();
-}
-
-main();
+})();
