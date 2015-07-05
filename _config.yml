@@ -15,3 +15,8 @@ github_username:  ascendntnu
 # Build settings
 markdown: kramdown
 exclude: [package.json,less,js,node_modules,bower_components,readme.md,blog.sublime-project,blog.sublime-workspace,bower.json,config.json,gulpfile.js,notes.txt]
+
+# Custom variables
+env: prod
+js-manifest: js-manifest
+css-manifest: css-manifest

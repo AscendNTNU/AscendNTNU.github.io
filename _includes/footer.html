@@ -46,7 +46,7 @@
       </div>
     </div>
   </div>
-
-  <script type="text/javascript" src="{{ "/public/js/bundle.js?q=" | prepend: site.baseurl }}{{site.time|date:"%X"}}" data-no-instant></script>
+  {% capture jsPath %}/public/js/{{site.data[site.js-manifest]["bundle.js"]}}{% endcapture %}
+  <script type="text/javascript" src="{{ jsPath | prepend: site.baseurl }}"></script>
 
 </footer>

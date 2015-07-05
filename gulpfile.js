@@ -1,29 +1,16 @@
 var gulp        = require('gulp'),
 	browserSync = require('browser-sync').create(),
 	cp          = require('child_process'),
-	path        = require('path'),
 	del 		= require('del'),
 	less		= require('gulp-less'),
 	sourcemaps	= require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
-	filter		= require('gulp-filter'),
 	uglify		= require('gulp-uglify'),
-	rename 		= require('gulp-rename'),
 	concat 		= require('gulp-concat'),
 	size		= require('gulp-size'),
 	minifyCss 	= require('gulp-minify-css'),
 	flatten		= require('gulp-flatten'),
-	googlecdn = require('gulp-google-cdn');
-
-//@TODO: Check out advantages with incremental builds. 
-//@TODO: Add auto versioning using gulp-rev
-
-//@TODO: Replace js with CDN for bootstrap.js, jQuery, same for css font-awesome Note: Bootstrap social is only dependent on bootstrap.
-gulp.task('cdn', function () {
-    return gulp.src('index.html')
-        .pipe(googlecdn(require('./bower.json')))
-        .pipe(gulp.dest('public'));
-});
+	rev         = require('gulp-rev');
 
 //Add paths to dependencies
 var paths = {
@@ -31,7 +18,6 @@ var paths = {
 		//Note: order matters - the files will be concated in order of appearance
 		'./bower_components/jquery/dist/jquery.js',
 		'./bower_components/bootstrap/dist/js/bootstrap.js',
-		'./bower_components/instantclick/instantclick.js',
 		'./bower_components/smooth-scroll/dist/js/smooth-scroll.js',
 		'./bower_components/scrollReveal.js/dist/scrollReveal.js',
 		'./js/**/*.js'
@@ -62,14 +48,16 @@ gulp.task('js',['clean-js'],function() {
 	    .pipe(browserSync.reload({stream:true}));
 });
 
-//@TODO: Add header after minification
 gulp.task('js-production',['clean-js'],function() {
 	return gulp.src(paths.js,{base:'./'})
-		.pipe(concat('bundle.js'))
+		.pipe(concat({path:'bundle.js',cwd:''}))
+		.pipe(rev())
 		.pipe(size({title:'js-size before minification'}))
 		.pipe(uglify())
 		.pipe(size({title:'js-size after minification'})) 
-	   	.pipe(gulp.dest('./public/js'));
+	   	.pipe(gulp.dest('./public/js'))
+	   	.pipe(rev.manifest('js-manifest.json'))
+	   	.pipe(gulp.dest('./_data'));
 });
 
 gulp.task('fonts',['clean-fonts'],function () {
@@ -90,16 +78,17 @@ gulp.task('less',['clean-css','fonts'],function() {
         .pipe(browserSync.reload({stream:true}));
 });
 
-//@TODO: Reduce code duplication using lazypipe
-//@TODO: Add header after minification
 gulp.task('less-production',['clean-css'],function() {
     return gulp.src('./less/main.less')
         .pipe(less({paths:paths.less}))
         .pipe(autoprefixer())
         .pipe(size({title:'css-size before minification'}))
         .pipe(minifyCss())
-        .pipe(size({title:'css-size before minification'}))
-        .pipe(gulp.dest('./public/css'));
+        .pipe(size({title:'css-size after minification'}))
+        .pipe(rev())
+        .pipe(gulp.dest('./public/css'))
+        .pipe(rev.manifest('css-manifest.json'))
+        .pipe(gulp.dest('./_data'));
 });
 
 gulp.task('clean-js',function (cb) {
@@ -115,40 +104,23 @@ gulp.task('clean-css',function (cb) {
 });
 
 /*
-//@TODO: Finish, and put into flow
-gulp.taks('assets-dev',['js','less','fonts'],function () {
-	//Make two separate rev manifests - OR just name them name-dev.js and name-dev.css.
-	//In dev, only needed once. How to test?
-	//Inject js and css
-});
-
-//@TODO: Finish, and put into flow
-gulp.task('assets-production',['js-production','less-production','fonts'],function () {
-	//Make two separate rev manifests
-	//Inject js and css
-});*/
-
-/*
 	Jekyll build tasks
-	@TODO: Remove duplicate code, eg. using lazypipe
 */
 
 gulp.task('jekyll-build-production',['js-production','less-production','fonts'], function (done) {
-    browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
     return cp.spawn('bundle',['exec','jekyll','build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
 //This task is needed to avoid race condition
 gulp.task('jekyll-initial-build',['js','less','fonts'], function (done) {
-    browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
-    return cp.spawn('bundle',['exec','jekyll','build'], {stdio: 'inherit'})
+    return cp.spawn('bundle',['exec','jekyll','build','--config','_config.yml,_config-dev.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 
 gulp.task('jekyll-build', function (done) {
     browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
-    return cp.spawn('bundle',['exec','jekyll','build'], {stdio: 'inherit'})
+    return cp.spawn('bundle',['exec','jekyll','build','--config','_config.yml,_config-dev.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -183,8 +155,7 @@ gulp.task('watch', function () {
 //Launch browser sync with minified assets - no watching
 gulp.task('production-test',['browser-sync-production']);
 
-//Compile minified assets - @TODO: Check out git hook using this
-gulp.task('publish',['js-production','less-production','fonts']);
+gulp.task('publish',['jekyll-build-production']);
 
 //Launch browsersync and watch
 gulp.task('default', ['browser-sync', 'watch']);

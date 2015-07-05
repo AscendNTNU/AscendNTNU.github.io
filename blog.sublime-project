@@ -3,7 +3,7 @@
 	[
 		{
 			"path": ".",
-			"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS","public/*"]
+			"folder_exclude_patterns": [".svn",".git", ".hg", "CVS","public/*"]
 		}
 	]
 }
