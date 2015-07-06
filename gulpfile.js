@@ -1,18 +1,18 @@
-var gulp        = require('gulp'),
-	browserSync = require('browser-sync').create(),
-	cp          = require('child_process'),
-	del 		= require('del'),
-	less		= require('gulp-less'),
-	sourcemaps	= require('gulp-sourcemaps'),
-	autoprefixer = require('gulp-autoprefixer'),
-	uglify		= require('gulp-uglify'),
-	concat 		= require('gulp-concat'),
-	size		= require('gulp-size'),
-	minifyCss 	= require('gulp-minify-css'),
-	flatten		= require('gulp-flatten'),
-	rev         = require('gulp-rev');
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+var cp          = require('child_process');
+var del 		= require('del');
+var less		= require('gulp-less');
+var sourcemaps	= require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var uglify		= require('gulp-uglify');
+var concat 		= require('gulp-concat');
+var size		= require('gulp-size');
+var minifyCss 	= require('gulp-minify-css');
+var flatten		= require('gulp-flatten');
+var rev         = require('gulp-rev');
 
-//Add paths to dependencies
+//Paths to dependencies
 var paths = {
 	js: [ 
 		//Note: order matters - the files will be concated in order of appearance
@@ -66,9 +66,13 @@ gulp.task('fonts',['clean-fonts'],function () {
 		.pipe(gulp.dest('./public/fonts'));
 });
 
-//@TODO: browserSync.notify when error occurs
 gulp.task('less',['clean-css','fonts'],function() {
     return gulp.src('./less/main.less')
+	    .on('error',function(err) {
+	    	browserSync.notify('<span style="color: grey">Error:</span> Less compilation failed');
+	    	console.log('Less compilation failed:');
+	    	console.log(err);
+	    })
         .pipe(sourcemaps.init())
         .pipe(less({paths:paths.less}))
         .pipe(autoprefixer())
@@ -119,7 +123,7 @@ gulp.task('jekyll-initial-build',['js','less','fonts'], function (done) {
 });
 
 gulp.task('jekyll-build', function (done) {
-    browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
+    browserSync.notify('<span style="color: grey">Running:</span> jekyll build');
     return cp.spawn('bundle',['exec','jekyll','build','--config','_config.yml,_config-dev.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
@@ -129,7 +133,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 });
 
 /*
-	Start dev server with Browser sync and watch
+	Start dev server with Browser sync
 */
 
 //Wait for initial jekyll-build, then launch the Server
@@ -155,6 +159,7 @@ gulp.task('watch', function () {
 //Launch browser sync with minified assets - no watching
 gulp.task('production-test',['browser-sync-production']);
 
+//Run before pushing repo to gh-pages
 gulp.task('publish',['jekyll-build-production']);
 
 //Launch browsersync and watch
