@@ -3,7 +3,6 @@ layout: default
 title: All posts
 permalink: /posts/
 ---
-
 <div>
   <div class="container">
 	  <div class="row">
