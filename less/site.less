@@ -1,11 +1,11 @@
-@bg-header: lighten(#001f3f,2%);
+@bg-header: lighten(@navy,2%);
 
 body {
-  background-color: #f2ff2;
+  background-color: @white;
   font-family: "Lato";
   font-weight: 300;
   font-size: 16px;
-  color: #111111;
+  color: @black;
   padding-top: 50px;
   font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Links */
 a {
-    color: #001f3f;
+    color: @navy;
     word-wrap: break-word;
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
@@ -33,7 +33,7 @@ a {
 a:hover,
 a:focus,
 a:visited {
-    color: lighten(#001f3f, 10%);
+    color: lighten(@navy, 10%);
     text-decoration: none;
     outline: 0;
 }
@@ -42,7 +42,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid @silver;
     margin: 1em 0;
     padding: 0;
 }
@@ -52,14 +52,14 @@ hr {
   background-color: @bg-header;
   padding: 60px 0;
   color: white;
-  border-bottom: #bdc3c7 solid 5px;
+  border-bottom: @silver solid 5px;
 
   a {
-    color: #AAAAAA;
+    color: @gray;
   }
 
   a:hover, a:focus {
-    color: lighten(#AAAAAA, 10%);
+    color: lighten(@gray, 10%);
   }
 
   p {
@@ -80,7 +80,7 @@ hr {
 
 .footer {
 
-  background-color: #111111;
+  background-color: @black;
   color: white;
 
   a {
