@@ -25,12 +25,12 @@ var paths = {
 	less: [
 	    //The main less folder (./less) is included by default
 		'./bower_components/bootstrap/less/',
-        './bower_components/font-awesome/less/',
+        './bower_components/fontawesome/less/',
         './node_modules/colors.css/less/'
     ],
     fonts: [
 		'./bower_components/bootstrap/fonts/*',
-		'./bower_components/font-awesome/fonts/*'
+		'./bower_components/fontawesome/fonts/*'
 	]
 };
 
