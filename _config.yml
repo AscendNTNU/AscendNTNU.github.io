@@ -4,9 +4,9 @@ long_title: Ascend
 email: ""
 #Description will appear in the document head meta (for
 #Google search results) and in your feed.xml site description.
+#Should be <160 characters.
 description: > # this means to ignore newlines until "baseurl:"
-  Autonomus aerial robotics for fun and learning. 
-  Ascend is The Norwegian University of Science and Technology's team in 
+  Autonomus aerial robotics. Ascend NTNU is The Norwegian University of Science and Technology's team in 
   the International Aerial Robotics Competition (IARC).
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ascendntnu.github.com" # the base hostname & protocol for your site
@@ -20,3 +20,7 @@ exclude: [package.json,less,js,node_modules,bower_components,readme.md,blog.subl
 env: prod
 js-manifest: js-manifest
 css-manifest: css-manifest
+
+# Add site map for search engine optimization
+gems:
+  - jekyll-sitemap
