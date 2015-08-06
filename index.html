@@ -2,11 +2,7 @@
 layout: default
 title: Home
 ---
-<div id="color-patch">
-  <!--This is here to hide body background on nav animate-->
-</div>
-
-<div id="headerwrap">
+<section class="page-head"> 
   <div class="container"> 
       <div class="row centered">
         <div class="col-md-6 col-md-offset-3">
@@ -16,44 +12,46 @@ title: Home
             </h1>
             <h1>{{site.long_title}}</h1>
             <p>
-            Autonomus aerial robotics for fun and learning. Ascend is the <a href="http://www.ntnu.edu/">Norwegian University Of Science and Technology's</a> team in the <a href="http://www.aerialroboticscompetition.org/">International Aerial Robotics Competition</a>.
-            </p>  
+              Autonomus aerial robotics for fun and learning. Ascend NTNU is the <a href="http://www.ntnu.edu/">Norwegian University Of Science and Technology's</a> team in the <a href="http://www.aerialroboticscompetition.org/">International Aerial Robotics Competition</a>.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-</div>
+  </div>
+</section>
 
-<section id="news" name="news"></section>
-
-<div id="newswrap">
+<section class="news" id="news">
   <div class="container">
-    <div class="row col-md-12">
-      <h2>Recent posts</h2>
-      <ul class="list-unstyled">
-        {% for post in site.posts %}
-          <li data-sr>
-            <h3>
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-            </h3>
-            <p>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Recent posts</h2>
+        <ul class="list-unstyled">
+          {% for post in site.posts %}
+            <li data-sr>
+              <h3>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+              </h3>
+
               {{ post.excerpt }}
-              <small><a href="{{ post.url | prepend: site.baseurl }}">Read more</a></small>
-            </p>
-          </li>
-        {% endfor %}
-      </ul>
-      <p class="text-muted"><a href="{{ "/posts" | prepend: site.baseurl }}">More posts</a></p>
-      <p class="text-muted">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+              <p><small><a href="{{ post.url | prepend: site.baseurl }}">Read more</a></small></p>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="text-muted"><a href="{{ "/posts" | prepend: site.baseurl }}">More posts</a></p>
+        <p class="text-muted">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<section class="values">
+<section class="teams">
   <div class="container">
-    <div class="row centered col-lg-12">
-      <h2>Technical groups in Ascend</h2>
+    <div class="row">
+      <div class="centered col-lg-12">
+        <h2>Technical groups in Ascend</h2>
+      </div>
     </div>
 
     <div class="row centered">

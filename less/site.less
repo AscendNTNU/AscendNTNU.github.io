@@ -1,4 +1,5 @@
 @bg-header: lighten(@navy,2%);
+@nav-size: 50px;
 
 body {
   background-color: @white;
@@ -12,18 +13,21 @@ body {
   overflow-scrolling: touch;
 }
 
-/* Titles */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
     color: #333;
 }
 
+//Spacing between page content and footer
+.footer-spacing {
+  padding-bottom: 20px;
+}
+
 .centered {
     text-align: center;
 }
 
-/* Links */
 a {
     color: @navy;
     word-wrap: break-word;
@@ -47,10 +51,14 @@ hr {
     padding: 0;
 }
 
-#headerwrap {
+.page-head {
 
+  margin-top: -@nav-size;
   background-color: @bg-header;
-  padding: 60px 0;
+  padding-top: 60px+@nav-size;
+  padding-bottom: 60px;
+  padding-left: 0;
+  padding-right: 0;
   color: white;
   border-bottom: @silver solid 5px;
 
@@ -74,7 +82,7 @@ hr {
 }
 
 
-#newswrap {
+.news {
   padding: 50px 0;
 }
 
@@ -94,8 +102,7 @@ hr {
 
 }
 
-
-.values {
+.teams {
 
   background-color: @bg-header;
   color: white;
@@ -104,6 +111,10 @@ hr {
 
   h1,h2,h3,h4 {
     color: white;
+  }
+
+  h2 {
+    padding-bottom: 20px;
   }
 }
 
@@ -138,13 +149,4 @@ hr {
   margin-bottom: 1px;
   padding-top: 7px;
   padding-bottom: 7px;
-}
-
-#color-patch {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 50px;//Nav-height
-  background-color: @bg-header;//Same as following content
 }
