@@ -2,6 +2,7 @@
 title: Ascend NTNU
 long_title: Ascend
 email: ""
+
 #Description will appear in the document head meta (for
 #Google search results) and in your feed.xml site description.
 #Should be <160 characters.
@@ -14,13 +15,17 @@ github_username:  ascendntnu
 
 # Build settings
 markdown: kramdown
-exclude: [package.json,less,js,node_modules,bower_components,readme.md,blog.sublime-project,blog.sublime-workspace,bower.json,config.json,gulpfile.js,notes.txt]
 
-# Custom variables
+exclude: [package.json,less,js,node_modules,bower_components,readme.md,blog.sublime-project,blog.sublime-workspace,bower.json,config.json,gulpfile.js,notes.txt]
+# Add site map for search engine optimization
+gems:
+  - jekyll-sitemap
+
+## Custom variables
 env: prod
 js-manifest: js-manifest
 css-manifest: css-manifest
 
-# Add site map for search engine optimization
-gems:
-  - jekyll-sitemap
+#Used in keywords meta tag
+keywords: "Ascend, NTNU, robotics, autonomus, team, IARC, international, aerial, robotics, competition, AI" 
+author: "Ascend NTNU"
