@@ -11,6 +11,11 @@ var size		= require('gulp-size');
 var minifyCss 	= require('gulp-minify-css');
 var flatten		= require('gulp-flatten');
 var rev         = require('gulp-rev');
+var htmlhint	= require('gulp-htmlhint');
+var w3cjs 		= require('gulp-w3cjs');
+var jshint 		= require('gulp-jshint');
+var bootlint  	= require('gulp-bootlint');
+var runSequence = require('run-sequence');
 
 //Paths to dependencies
 var paths = {
@@ -116,7 +121,6 @@ gulp.task('jekyll-build-production',['js-production','less-production','fonts'],
         .on('close', done);
 });
 
-//This task is needed to avoid race condition
 gulp.task('jekyll-initial-build',['js','less','fonts'], function (done) {
     return cp.spawn('bundle',['exec','jekyll','build','--config','_config.yml,_config-dev.yml'], {stdio: 'inherit'})
         .on('close', done);
@@ -130,6 +134,43 @@ gulp.task('jekyll-build', function (done) {
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
+});
+
+/*
+	Linter tasks
+*/
+
+gulp.task('lint',['html-lint','html-validate','js-lint','bootlint']);
+
+gulp.task('html-lint',function() {
+	return gulp.src('./_site/**/*.html')
+    			.pipe(htmlhint())
+    			.pipe(htmlhint.reporter());
+});
+ 
+gulp.task('html-validate', function () {
+	var through2 = require('through2');
+    
+    return gulp.src('./_site/**/*.html')
+        .pipe(w3cjs())
+        .pipe(through2.obj(function(file, enc, cb){
+            cb(null, file);
+            if (!file.w3cjs.success){
+                throw new Error('HTML validation error(s) found');
+            }
+        }));
+});
+
+gulp.task('js-lint',function() {
+	return gulp.src('./js/**/*.js')
+		.pipe(jshint())
+	  	.pipe(jshint.reporter('jshint-stylish'))
+	  	.pipe(jshint.reporter('fail'));
+});
+
+gulp.task('bootlint', function() {
+    return gulp.src('./_site/**/*.html')
+        .pipe(bootlint());
 });
 
 /*
@@ -157,10 +198,16 @@ gulp.task('watch', function () {
 */
 
 //Launch browser sync with minified assets - no watching
-gulp.task('production-test',['browser-sync-production']);
+gulp.task('production',function(cb) {
+	runSequence('browser-sync-production','lint',cb);
+});
 
 //Run before pushing repo to gh-pages
-gulp.task('publish',['jekyll-build-production']);
+gulp.task('publish',function(cb) {
+	runSequence('jekyll-build-production','lint',cb);
+});
 
 //Launch browsersync and watch
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', function(cb) {
+	runSequence(['browser-sync', 'watch'],'lint',cb);
+});
