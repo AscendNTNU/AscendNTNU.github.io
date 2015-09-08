@@ -13,17 +13,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="nav-right">
       <ul class="nav navbar-nav navbar-right">
-        <!--Links to same page-->
-        {% if page.title == 'Home' %}
-        <li data-toggle="collapse" data-target=".navbar-collapse.in" class="active"><a data-scroll href="#home" class="smothscroll">Home</a></li>
-        <li data-toggle="collapse" data-target=".navbar-collapse.in"><a data-scroll href="#news" class="smothscroll">Recent posts</a></li>
-        {% else %}
-        <li><a href="/#home">Home</a></li>
-        <li><a href="/#news">Recent posts</a></li>
-        {% endif%}
-        <!--Links to new pages-->
-        {% for p in site.pages %}{% if p.title != 'Home' %}<li class="{% if p.title == page.title %}active{% endif %}"><a 
-            href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>{% endif %}{% endfor %}
+        {% for nav in site.data.navbar %}
+          {% if page.title == nav.title %}
+          <li data-toggle="collapse" data-target=".navbar-collapse.in" class="active">
+            <a data-scroll href="#top" class="smothscroll">{{nav.title}}</a>
+          </li>
+          {% else %}
+          <li>
+            <a href="{{ nav.link | prepend: site.baseurl }}">{{nav.title}}</a>
+          </li>
+          {% endif%}
+        {% endfor %}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->

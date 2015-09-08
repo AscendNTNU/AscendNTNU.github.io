@@ -1,0 +1,17 @@
+#Define which pages are seen in navbar
+
+- title: Home
+  link: /
+
+- title: Blog
+  link: /blog/
+
+- title: Team
+  link: /team/
+
+- title: Join us
+  link: /join/
+
+- title: About
+  link: /about/
+

@@ -190,7 +190,7 @@ gulp.task('browser-sync-production', ['jekyll-build-production'], function() {
 gulp.task('watch', function () {
     gulp.watch('./less/*.less', ['less']);
     gulp.watch('./js/*.js', ['js']);
-    gulp.watch(['index.html','_includes/*.html' ,'_layouts/*.html', '_posts/*','*.md'], ['jekyll-rebuild']);
+    gulp.watch(['*.html','_includes/*.html' ,'_layouts/*.html', '_posts/*','*.md'], ['jekyll-rebuild']);
 });
 
 /*
@@ -209,5 +209,5 @@ gulp.task('publish',function(cb) {
 
 //Launch browsersync and watch
 gulp.task('default', function(cb) {
-	runSequence(['browser-sync', 'watch'],'lint',cb);
+	runSequence(['browser-sync', 'watch'],cb);
 });

@@ -16,7 +16,7 @@ github_username:  ascendntnu
 # Build settings
 markdown: kramdown
 
-exclude: [package.json,less,js,node_modules,bower_components,readme.md,blog.sublime-project,blog.sublime-workspace,bower.json,config.json,gulpfile.js,notes.txt]
+exclude: [package.json,less,js,node_modules,bower_components,readme.md,ascend-homepage.sublime-project,blog.sublime-workspace,bower.json,config.json,gulpfile.js,notes.txt]
 # Add site map for search engine optimization
 gems:
   - jekyll-sitemap
