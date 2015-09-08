@@ -1,0 +1,53 @@
+##The board##
+
+- name: Johan Hatleskog
+  background: Cybernetics and Robotics
+  role: Project leader
+
+- name: Tobias Stene Hansteen
+  background: Computer Science
+  role: Technical leader
+
+- name: Marius Maaland
+  background: Computer Science
+  role: Group leader Admin
+
+- name: Simen Haugo
+  background: Cybernetics and Robotics
+  role: Group leader AI
+
+- name: Martin Sollie
+  background: Cybernetics and Robotics
+  role: Group leader Control
+
+- name: Matias Christensen
+  background: Computer Science
+  role: Group leader Perception
+
+##Team members AI## 
+- name: Mikkel Antonsen
+  background: Computer Science
+  role: "Team member, AI"
+
+- name: Alexander Bakke
+  background: Computer Science
+  role: "Team member, AI"
+
+- name: Nils Inge Rugsveen
+  background: Computer Science
+  role: "Team member, AI"
+
+##Team members Control##
+- name: Christian Wilhelmsen
+  background: Mechanical Engineering
+  role: "Team member, hardware"
+
+- name: Stein-Inge Torset Øien
+  background: Cybernetics and Robotics
+  role: "Team member, control and perception"
+
+##Team members Perception
+- name: Thomas Rostrup Andersen
+  background: Cybernetics and Robotics
+  role: "Team member, control - with special focus on drone hw"
+

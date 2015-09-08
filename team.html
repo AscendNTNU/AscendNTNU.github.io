@@ -1,0 +1,29 @@
+---
+layout: default
+title: Team
+permalink: /team/
+---
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<section>
+				<h1>The team</h1>
+				<p>
+					We have has four groups: AI, Control, Perception and Admin. The board consists of the project leader, the technical leader and the group leaders. This means that we formally have a quite hierarchical stucture. However, in practice we have a very flat structure where everybody contributes within the areas they want and where attention is needed.
+				</p>
+
+				<h2>Members</h2>
+				{% for member in site.data.members %}
+				<dl class="dl-horizontal">
+				 <dt>Name:</dt>
+				 <dd>{{member.name}}</dd>
+				 <dt>Background:</dt>
+				 <dd>{{member.background}}</dd>
+				 <dt>Role:</dt>
+				 <dd>{{member.role}}</dd>
+				</dl>
+				{% endfor%}
+			</section>
+		</div>
+	</div>
+</div>
