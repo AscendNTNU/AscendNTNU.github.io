@@ -1,22 +1,18 @@
-@bg-header: lighten(@navy,2%);
+//@bg-header: lighten(@navy,2%);
 @nav-size: 50px;
 
 body {
-  background-color: @white;
-  font-family: "Lato";
-  font-weight: 300;
-  font-size: 16px;
-  color: @black;
+  font-weight: 200;
+  font-size: 18px;
   padding-top: 50px;
   font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  //text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway";
     font-weight: 300;
-    color: #333;
+    //color: #333;
 }
 
 //Spacing between page content and footer
@@ -29,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: @navy;
+    color: darken(#4d90fc, 40%);
     word-wrap: break-word;
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
@@ -37,7 +33,6 @@ a {
 a:hover,
 a:focus,
 a:visited {
-    color: lighten(@navy, 10%);
     text-decoration: none;
     outline: 0;
 }
@@ -46,31 +41,31 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid @silver;
+    border-top: 1px solid;
     margin: 1em 0;
     padding: 0;
 }
 
 .page-head {
+  color: rgba(255, 255, 255, 0.870588);
+  background-color: #0277BD;
 
   margin-top: -@nav-size;
-  background-color: @bg-header;
   padding-top: 60px+@nav-size;
   padding-bottom: 60px;
   padding-left: 0;
   padding-right: 0;
-  color: white;
-  border-bottom: @silver solid 5px;
 
   a {
-    color: @gray;
+    color: #81D4FA;
   }
 
   a:hover, a:focus {
-    color: lighten(@gray, 10%);
+    color: lighten(#81D4FA, 10%);
   }
 
   p {
+    font-size: 1em;
     line-height: 28px;
   }
 
@@ -88,29 +83,30 @@ hr {
 
 .footer {
 
-  background-color: @black;
-  color: white;
+  //background-color: @black;
+  //color: white;
 
   a {
-    color: lighten(@bg-header, 60%);
+    //color: lighten(@bg-header, 60%);
   }
 
   a:hover, 
   a:focus {
-    color: lighten(@bg-header, 70%);
+    //color: lighten(@bg-header, 70%);
   }
 
 }
 
 .teams {
 
-  background-color: @bg-header;
-  color: white;
+  color: rgba(255, 255, 255, 0.870588);
+  background-color: #0277BD;
+
   padding-top: 60px;
   padding-bottom: 60px;
 
   h1,h2,h3,h4 {
-    color: white;
+    //color: white;
   }
 
   h2 {
@@ -118,35 +114,24 @@ hr {
   }
 }
 
-.navbar-default {
-  transition: min-height 0.3s ease;
-}
-.navbar-default .navbar-brand {
-  transition: padding-top 0.3s ease, height 0.3s ease;
-}
-.navbar-default .navbar-nav > li > a {
-    transition: padding 0.3s ease;
-}
-.smallnav {
-  min-height: 30px;
-}
-.smallnav .navbar-brand {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  height: 30px;
-}
-.smallnav .navbar-nav > li > a {
-  padding-top: 5px;
-  padding-bottom: 5px;
+//Make definition lists less obtrusive
+dl,dd {
+  font-size: 16px;
 }
 
-.navbar-default .navbar-toggle {
-  transition: padding 0.3s ease, margin 0.3s ease;
+//Make address less obtrusive
+address {
+  font-size: 16px;
 }
 
-.smallnav .navbar-toggle {
-  margin-top: 1px;
-  margin-bottom: 1px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+//Muted text in jumbotron
+.jumbotron {
+  p {
+    small {
+      font-size: 0.7em;
+      font-style: italic;
+      opacity: 0.7;
+    }
+  }
 }
+

@@ -31,9 +31,7 @@
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
-
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <!--Site environment set to: {{site.env}}-->
     {% capture cssPath %}/public/css/{{site.data[site.css-manifest]["main.css"]}}{% endcapture %}
     <link rel="stylesheet" href="{{ cssPath | prepend: site.baseurl }}">
