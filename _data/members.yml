@@ -40,14 +40,14 @@
 ##Team members Control##
 - name: Christian Wilhelmsen
   background: Mechanical Engineering
-  role: "Team member, hardware"
+  role: "Team member, Control"
 
 - name: Stein-Inge Torset Øien
   background: Cybernetics and Robotics
-  role: "Team member, control and perception"
+  role: "Team member, Perception"
 
 ##Team members Perception
 - name: Thomas Rostrup Andersen
   background: Cybernetics and Robotics
-  role: "Team member, control - with special focus on drone hw"
+  role: "Team member, Perception"
 
