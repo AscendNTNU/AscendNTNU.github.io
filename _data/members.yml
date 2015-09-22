@@ -42,6 +42,10 @@
   background: Mechanical Engineering
   role: "Team member, Control"
 
+- name: Brage Eikanger
+  background: Cybernetics and Robotics
+  role: "Team member, Control"
+
 - name: Stein-Inge Torset Øien
   background: Cybernetics and Robotics
   role: "Team member, Perception"
@@ -51,3 +55,6 @@
   background: Cybernetics and Robotics
   role: "Team member, Perception"
 
+- name: Håkon Flatval
+  background: Computer Science
+  role: "Team member, Perception"
