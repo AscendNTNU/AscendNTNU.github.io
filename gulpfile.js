@@ -16,6 +16,7 @@ var w3cjs 		= require('gulp-w3cjs');
 var jshint 		= require('gulp-jshint');
 var bootlint  	= require('gulp-bootlint');
 var runSequence = require('run-sequence');
+var imagemin 	= require('gulp-imagemin');
 
 //Paths to dependencies
 var paths = {
@@ -36,8 +37,21 @@ var paths = {
     fonts: [
 		'./bower_components/bootstrap/fonts/*',
 		'./bower_components/fontawesome/fonts/*'
-	]
+	],
+	images: './images/*'
 };
+
+/*
+	Compress images - TODO: Watch image folder, inject and only compress changed files.
+*/
+gulp.task('image-min', function () {
+    return gulp.src(paths.images)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+        }))
+        .pipe(gulp.dest('./public/assets'));
+});
 
 /*
 	Compile js and less
@@ -116,12 +130,12 @@ gulp.task('clean-css',function (cb) {
 	Jekyll build tasks
 */
 
-gulp.task('jekyll-build-production',['js-production','less-production','fonts'], function (done) {
+gulp.task('jekyll-build-production',['js-production','less-production','fonts','image-min'], function (done) {
     return cp.spawn('bundle',['exec','jekyll','build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
-gulp.task('jekyll-initial-build',['js','less','fonts'], function (done) {
+gulp.task('jekyll-initial-build',['js','less','fonts','image-min'], function (done) {
     return cp.spawn('bundle',['exec','jekyll','build','--config','_config.yml,_config-dev.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
