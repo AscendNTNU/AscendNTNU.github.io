@@ -6,6 +6,16 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.nav-logo {
+
+  padding-left: 0;
+  padding-right: 3px;
+
+  img {
+    height: 18px;//Corresponding to line height in nav
+  }
+}
+
 body {
   font-weight: 200;
   font-size: 18px;
@@ -80,9 +90,20 @@ hr {
   }
 
   h1 {
+    //Let H1 be present due to SEO
     margin-top: 0px;
-    font-size: 70px;
+    font-size: 0px;
     color: inherit;
+    visibility: hidden;
+  }
+
+  .header-intro-text {
+    margin-top: 10px;
+  }
+
+  .header-logo {
+    width: 100%;
+    max-width: 220px;
   }
 }
 
@@ -103,6 +124,10 @@ hr {
   a:hover, 
   a:focus {
     //color: lighten(@bg-header, 70%);
+  }
+
+  .footer-logo {
+    height: 14px;
   }
 
 }
