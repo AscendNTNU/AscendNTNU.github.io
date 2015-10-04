@@ -10,7 +10,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Autonomus aerial robotics. Ascend NTNU is The Norwegian University of Science and Technology's team in 
   the International Aerial Robotics Competition (IARC).
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://org.ascendntnu.no" # the base hostname & protocol for your site
+url: "http://www.ascendntnu.no" # the base hostname & protocol for your site
 github_username:  ascendntnu
 
 # Build settings
