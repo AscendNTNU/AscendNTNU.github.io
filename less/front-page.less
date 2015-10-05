@@ -1,0 +1,96 @@
+.page-head {
+  color: rgba(255, 255, 255, 0.870588);
+  background-color: #231F20;
+
+  margin-top: -@nav-size;
+  padding-top: 60px+@nav-size;
+  padding-bottom: 60px;
+  padding-left: 0;
+  padding-right: 0;
+
+  a {
+    color: #81D4FA;
+  }
+
+  a:hover, a:focus {
+    color: lighten(#81D4FA, 10%);
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 28px;
+  }
+
+  h1 {
+    //Let H1 be present due to SEO
+    margin-top: 0px;
+    font-size: 0px;
+    color: inherit;
+    visibility: hidden;
+  }
+
+  .header-intro-text {
+    margin-top: 10px;
+  }
+
+  .header-logo {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+
+.news {
+  padding: 50px 0;
+}
+
+
+.teams {
+
+  color: rgba(255, 255, 255, 0.870588);
+  background-color: #231F20;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  h1,h2,h3,h4 {
+    //color: white;
+  }
+
+  h2 {
+    padding-bottom: 20px;
+  }
+}
+
+.sponsor-section {
+
+  @img-box-height: 200px;
+
+  h2 {
+    padding-bottom: 20px; 
+  }
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .image-box {
+    height: @img-box-height;
+
+    //Vertical
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      max-height: @img-box-height;
+    }
+  }
+
+  .text {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,25 @@
+<section class="sponsor-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12 centered"><h2>Our sponsors</h2></div>
+				</div>
+				<div class="row">
+					{% for sponsor in site.data.sponsors %}
+					<div class="col-md-4">
+						<div class="image-box">
+							<a data-sr href="{{sponsor.link}}" target="_blank">
+								<img class="img-responsive" src="{{ sponsor.logo | prepend: site.baseurl }}" alt="{{sponsor.name}} logo">
+							</a>
+						</div>
+						<p class="text">
+							{{sponsor.short_text}}
+						</p>
+					</div>
+					{% endfor%}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
