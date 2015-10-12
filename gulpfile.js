@@ -25,7 +25,6 @@ var paths = {
 		'./bower_components/jquery/dist/jquery.js',
 		'./bower_components/bootstrap/dist/js/bootstrap.js',
 		'./bower_components/smooth-scroll/dist/js/smooth-scroll.js',
-		'./bower_components/scrollReveal.js/dist/scrollReveal.js',
 		'./js/**/*.js'
 	],
 	less: [

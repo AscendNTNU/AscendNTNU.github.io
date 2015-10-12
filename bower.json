@@ -25,7 +25,6 @@
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.4",
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git",
-    "scrollReveal.js": "~2.3.0",
     "fontawesome": "~4.4.0"
   },
   "devDependencies": {}
