@@ -7,21 +7,18 @@ permalink: /blog/
   	<div class="container">
 	  <div class="row">
 	    <div class="col-md-12">
-	      <ul class="list-unstyled">
 	        {% for post in site.posts %}
-	          <li>
-	            <h3>
+	            <h1>
 	              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-	              <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-	            </h3>
+	              <small>{{ post.date | date: "%b %-d, %Y" }} {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small>
+	            </h1>
 	            
-	            <article>
+	            <article class="post-content">
 	            {{ post.content }}
 	            </article>
 	            
-	          </li>
+	            <hr/>
 	        {% endfor %}
-	      </ul>
 	      <p class="text-muted">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 	    </div>
 	  </div>
