@@ -37,7 +37,7 @@ My favorite approach, if I don't know where to begin on a problem, is to visuali
 
 <div class="row">
 	<div class="col-md-4">
-		<img class="img-responsive" src="/public/assets/simulation-1.gif">
+		<img class="img-responsive" alt="Simulation" src="/public/assets/simulation-1.gif">
 	</div>
 	<div class="col-md-8">
 	<p>
@@ -48,7 +48,7 @@ My favorite approach, if I don't know where to begin on a problem, is to visuali
 
 <div class="row">
 	<div class="col-md-4">
-		<img class="img-responsive" src="/public/assets/simulation-2.gif">
+		<img class="img-responsive" alt="Simulation" src="/public/assets/simulation-2.gif">
 	</div>
 	<div class="col-md-8">
 	<p>
@@ -59,7 +59,7 @@ My favorite approach, if I don't know where to begin on a problem, is to visuali
 
 <div class="row">
 	<div class="col-md-4">
-		<img class="img-responsive" src="/public/assets/simulation-3.gif">
+		<img class="img-responsive" alt="Simulation" src="/public/assets/simulation-3.gif">
 	</div>
 	<div class="col-md-8">
 	<p>
