@@ -7,6 +7,12 @@ author: Simen Haugo
 ---
 An accurate probabilistic model of the ground robots is a step towards bulletproofing a robust state estimator.
 
+![Motion capture system](/public/assets/lumaVolumeLarge.jpg)
+
+<p class="text-muted centered">
+	Typical motion capture installation - Optitrack.
+</p>
+
 Unlike motion-capture laboratories that have a plethora of cameras providing full coverage of the world, our drone must be able to estimate the state of the world from its own pair of eyes. The state being the orientation and position of the drone and a tenfold of moving ground robots. This poses a series of problems related to estimating the world state, namely, what do you do when you can't see a robot?
 
 Our drone must be aware of whereabouts of each ground robot in order to make strategical decisions about which robot to turn. Furthermore, it is unacceptable for ground robots to leave the floor, since that means less points for us, and an increased risk of a terminated run.
