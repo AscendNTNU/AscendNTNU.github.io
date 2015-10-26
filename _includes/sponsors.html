@@ -2,8 +2,16 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-12 centered"><h2>Our sponsors</h2></div>
+				<div class="row main-sponsor">
+					<div class="col-md-12">
+						<h2 class="centered">Our sponsors</h2>
+						<div>
+							<a href="http://kongsberg.com/" target="_blank">
+								<img class="img-responsive" src="/public/assets/kongsberg.svg" alt="Kongsberg logo">
+							</a>
+						</div>
+						<p>Our main sponsor Kongsberg is an international, knowledge-based group that supplies high-technology systems and solutions to customers engaged in the oil and gas industry, the merchant marine, and the defence and aerospace industries.</p>
+					</div>
 				</div>
 				<div class="row">
 					{% for sponsor in site.data.sponsors %}
