@@ -13,6 +13,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.ascendntnu.no" # the base hostname & protocol for your site
 github_username:  ascendntnu
 twitter_username: ascendntnu
+instagram_username: ascendntnu
+#facebook_page_url: https://www.facebook.com/NameOfPage
 
 # Build settings
 markdown: kramdown
