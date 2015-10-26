@@ -2,6 +2,7 @@
 layout: post
 title:  "Hello world from Ascend"
 date:   2015-07-07 12:00:00
+author: Johan Hatleskog
 categories: update
 ---
 Ascend is a new aerial robotics team from [NTNU], established to represent [NTNU] in the annual [International Aerial Robotics Competition (IARC)][IARC]. After using the spring to gather a team, we are now very exited to start on our first IARC-mission.
