@@ -14,4 +14,4 @@ Your Extreme is a case competition held by our main sponsor Kongsberg. The compe
 
 The complete program for the day can be found over at [yourextreme.no](http://yourextreme.no/).
 
-We recommend everybody to check out the exhibitions and presentations. Ascend will have a **stand at Elektrobygget from 08:00 to 16:00** and the **presentation will be held at Kjelhuset at 13:40**.
+We recommend everybody to check out the exhibitions and presentations. Ascend will have a **stand at Elektrobygget from 08:00 to 16:00** and the **presentation will be held at Kjelhuset at 13:50**.
