@@ -6,7 +6,12 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="{{ site.keywords }}">
     <meta name="author" content="{{ site.author }}">
+
+    <!--FB wants these specified, even though most of them can be infered from other properties-->
     <meta property="og:image" content="{{ "/public/assets/logo.png" | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:title" content="{{ site.author }}" />
     <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <!--Generated with http://realfavicongenerator.net/-->
