@@ -6,6 +6,8 @@ categories: simulation tech modelling ai
 author: Simen Haugo
 ---
 
+Guiding the search for ground robots turns out to be more difficult than anticipated.
+
 ![Mysterious simulation](/public/assets/tech-guiding-search/title.png)
 
 Last time - which admittedly is a long time ago, so I don't blame you for not remembering - I talked about modelling and simulating the ground robots. I talked about how this was big deal, because our drone has bad eyesight and can't actually see the whole arena all the time.
