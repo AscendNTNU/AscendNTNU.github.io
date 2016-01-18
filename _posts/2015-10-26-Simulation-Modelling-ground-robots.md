@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Simulation: Modelling ground robots"
+title:  "Tech: Modelling ground robots"
 date:   2015-10-26 12:00:00
-categories: simulation modelling robots
+categories: simulation tech modelling ai
 author: Simen Haugo
 ---
 An accurate probabilistic model of the ground robots is a step towards bulletproofing a robust state estimator.
