@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tech: Guiding the search for ground robots (2)"
+title:  "Tech: Guiding the search for ground robots (Part 2)"
 date:   2016-01-25 11:00:00
 categories: simulation tech modelling ai
 author: Simen Haugo
