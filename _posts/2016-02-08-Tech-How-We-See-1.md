@@ -71,8 +71,6 @@ Unfortunately, I skipped over a bunch of technical details in the above explanat
 
 Here's a video I recorded at our lab the other day. In an attempt to somewhat reproduce the competition at home, we have not only bought in a handful of vacuum cleaner robots, but we have also created an elaborate grid of sticky tape.
 
-![](/public/assets/tech-how-we-see-1/scaled.mp4)
-
 This is, part, what our drone will be seeing. We think we need more cameras, but we're pretty sure we'll have one pointing downwards like this. Naturally, you have no problem working out how big the grid was, or how many tiles I walked in that video. But that's thanks to the many years of intense grid-position-estimation training you've done, right?
 
 Sadly, our drone skipped out on his practice as a kid, so he spends most of his waking time in a confused state, unable to tell lines apart from shoes.  For now, it is up to us to take the video feed, point at a group of pixels, and tell our drone: *"That right there, yeah, that's a line. And that line ... intersects this other line ... here!"*.
