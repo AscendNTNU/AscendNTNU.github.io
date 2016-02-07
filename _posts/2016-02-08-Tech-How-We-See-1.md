@@ -2,7 +2,7 @@
 layout: post
 title:  "Tech: How we see the world (Part 1)"
 date:   2016-02-08 10:00:00
-categories: tech computer vision image processing
+categories: tech computer vision
 author: Simen Haugo
 ---
 
@@ -46,10 +46,12 @@ The arena, as you know, has a grid of 1x1 meter tiles. On each side of the arena
 To do this, we have attached a camera that can see below the drone. On the video feed we run some clever algorithms that extract sets of lines. After we have found those lines, we essentially need to solve a *"triangulation"* problem.
 
 ![](/public/assets/tech-how-we-see-1/tileframe.png)
-<p style="text-align:center;">Suppose that the camera sees the white region, in particular, atleast one of the line intersections.</p>
+
+Suppose that the camera sees the white region, in particular, atleast one of the line intersections.
 
 ![](/public/assets/tech-how-we-see-1/tileframe-2.png)
-<p style="text-align:center;">Our vision algorithm picks out the lines that it sees. We know how these lines are configured in the real world, because they are located on a regular grid.</p>
+
+Our vision algorithm picks out the lines that it sees. We know how these lines are configured in the real world, because they are located on a regular grid.
 
 As we see them, the lines are just projected onto the camera lens, so we need to do some math to find the corresponding lines on the real arena. The way we do this is by placing an *"virtual camera"*, with the same orientation and height as the drone, into an *"virtual arena"*.
 
