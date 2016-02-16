@@ -23,38 +23,55 @@
 - name: Matias Christensen
   background: Computer Science
   role: Group leader Perception
+  
+##Team members Admin##
+- name: Ann Therese Kjenes
+  background: Economics and Business Administration
+  role: Head of Finance
+  
+- name: Emilie Udnæs
+  background: Electrical Engineering
+  role: Head of Marketing
 
 ##Team members AI## 
 - name: Mikkel Antonsen
   background: Computer Science
-  role: "Team member, AI"
+  role: "AI Engineer"
+  group: "AI"
 
 - name: Alexander Bakke
   background: Computer Science
-  role: "Team member, AI"
+  role: "AI Engineer"
+  group: "AI"
 
 - name: Nils Inge Rugsveen
   background: Computer Science
-  role: "Team member, AI"
+  role: "AI Engineer"
+  group: "AI"
 
 ##Team members Control##
 - name: Christian Wilhelmsen
   background: Mechanical Engineering
-  role: "Team member, Control"
+  role: "Mechanical Engineer"
+  group: "Control"
 
 - name: Brage Eikanger
   background: Cybernetics and Robotics
-  role: "Team member, Control"
+  role: "Control engineer"
+  group: "Control"
 
 - name: Stein-Inge Torset Øien
   background: Cybernetics and Robotics
-  role: "Team member, Perception"
+  role: "Control engineer"
+  group: "Perception"
 
 ##Team members Perception
 - name: Thomas Rostrup Andersen
   background: Cybernetics and Robotics
-  role: "Team member, Perception"
+  role: "Control engineer"
+  group: "Perception"
 
 - name: Håkon Flatval
   background: Computer Science
-  role: "Team member, Perception"
+  role: "Computer Science Engineer"
+  group: "Perception"
