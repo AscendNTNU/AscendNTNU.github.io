@@ -7,10 +7,10 @@ Ascend NTNU is a non-profit student organization created to represent the [Norwe
 
 Ascend was founded during the spring of 2015, and we plan on attending our first competition in 2016.
 
-###Contact us
+### Contact us
 Send an email to [hi@ascendntnu.no](mailto:hi@ascendntnu.no), and we'll get back to you.
 
-###Addresses
+### Addresses
 **Physical address**, [click here to view in google maps][map]
 <!--Bruker HTML-kode i markdown for å kunne address-elementer -->
 <address>
@@ -29,12 +29,12 @@ Send an email to [hi@ascendntnu.no](mailto:hi@ascendntnu.no), and we'll get back
 	Norway  
 </address>
 
-###Organisational documents
+### Organisational documents
 We plan on publishing core organisational documents here as we finish them.
 
 -  **Our statutes (in norwegian: vedtekter):** Our statutes are available on github in [this repo][vedtekter-repo]. [Click here to view the pdf][vedtekter-pdf]. The statutes are written in Norwegian.
 
-###Formal information about Ascend NTNU
+### Formal information about Ascend NTNU
 We are registered in [The Brønnøysund Register Centre][brreg-en]. See [our listing here][brreg-ascend].
 
 **Organisational number:** 915 737 641
