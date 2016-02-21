@@ -2,7 +2,7 @@
 
 - name: Johan Hatleskog
   background: Cybernetics and Robotics
-  role: Project leader
+  role: Project manager
 
 - name: Tobias Stene Hansteen
   background: Cybernetics and Robotics
@@ -10,7 +10,7 @@
 
 - name: Marius Maaland
   background: Computer Science
-  role: Deputy project leader
+  role: Deputy project manager
 
 - name: Simen Haugo
   background: Cybernetics and Robotics
@@ -27,11 +27,11 @@
 ##Team members Admin##
 - name: Ann Therese Kjenes
   background: Economics and Business Administration
-  role: Head of Finance
+  role: Business manager
   
 - name: Emilie Udnæs
   background: Electrical Engineering
-  role: Head of Marketing
+  role: Marketing manager
 
 ##Team members AI## 
 - name: Mikkel Antonsen
