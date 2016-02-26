@@ -43,7 +43,7 @@ So how does our drone make these vacuum cleaners go where it wants them to go? T
 1. Tapping on top of them, making them turn 45 degrees clockwise 
 2. Bumping into them in the front, turning them 180 degrees. 
 
-<div class="row">
+<div class="row"  style="padding-top: 20px; padding-bottom: 20px">
 	<div class="col-md-6">
 		<figure>
 			<img class="img-responsive" alt="Mission start state" src="/public/assets/45-degree-turn-cartoon.png">
