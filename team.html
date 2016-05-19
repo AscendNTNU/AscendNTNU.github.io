@@ -15,12 +15,12 @@ permalink: /team/
 				<h2>Members</h2>
 				{% for member in site.data.members %}
 				<dl class="dl-horizontal">
-				 <dt>Name:</dt>
-				 <dd>{{member.name}}</dd>
-				 <dt>Background:</dt>
-				 <dd>{{member.background}}</dd>
-				 <dt>Role:</dt>
-				 <dd>{{member.role}}</dd>
+				<dt><img class="img-responsive header-logo" alt="img" src={{member.image}} align="right" style="width:120px;height:170px;"></dt>
+				 <dd style="padding-top: 1.8em;">
+					 <p><b>{{member.name}}</b></p>
+					 <p>{{member.background}}</p>
+					 <p>{{member.role}}</p>
+				 </dd>
 				</dl>
 				{% endfor%}
 			</section>
