@@ -44,26 +44,26 @@
 ##Team members AI## 
 - name: Mikkel Antonsen
   background: Computer Science
-  role: "AI Engineer"
+  role: "AI engineer"
   group: "AI"
   image: "/images/team/mikkel.jpg"
 
 - name: Alexander Bakke
   background: Computer Science
-  role: "AI Engineer"
+  role: "AI engineer"
   group: "AI"
   image: "/images/team/alexander.jpg"
 
 - name: Nils Inge Rugsveen
   background: Computer Science
-  role: "AI Engineer"
+  role: "AI engineer"
   group: "AI"
   image: "/images/team/nils.jpg"
 
 ##Team members Control##
 - name: Christian Wilhelmsen
   background: Mechanical Engineering
-  role: "Mechanical Engineer"
+  role: "Mechanical engineer"
   group: "Control"
   image: "/images/team/christian.jpg"
 
@@ -82,12 +82,12 @@
 ##Team members Perception
 - name: Thomas Rostrup Andersen
   background: Cybernetics and Robotics
-  role: "Control engineer"
+  role: "Perception engineer"
   group: "Perception"
   image: "/images/team/thomas.jpg"
 
 - name: Håkon Flatval
   background: Computer Science
-  role: "Computer Science Engineer"
+  role: "Perception engineer"
   group: "Perception"
   image: "/images/team/hakon.jpg"
