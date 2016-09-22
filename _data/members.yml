@@ -1,93 +1,122 @@
-##The board##
-
-- name: Johan Hatleskog
+## Admin ##
+- name: Brage Eikanger
   background: Cybernetics and Robotics
-  role: Project manager
-  image: "/images/team/johan.jpg"
+  role: Project Manager
+  group: Project
+  image: "/images/team/brage.jpg"
 
-- name: Tobias Stene Hansteen
-  background: Cybernetics and Robotics
-  role: Technical leader
-  image: "/images/team/tobias.jpg"
-
-- name: Marius Maaland
-  background: Computer Science
-  role: Deputy project manager
-  image: "/images/team/marius.jpg"
-
-- name: Simen Haugo
-  background: Cybernetics and Robotics
-  role: Group leader AI
-  image: "/images/team/simen.jpg"
-
-- name: Martin Sollie
-  background: Cybernetics and Robotics
-  role: Group leader Control
-  image: "/images/team/martin.jpg"
+- name: Emilie Udnæs
+  background: Electrical Engineering
+  role: Marketing Manager
+  group: Marketing
+  image: "/images/team/emilie.jpg"
 
 - name: Matias Christensen
   background: Computer Science
-  role: Group leader Perception
+  role: Chief Engineer
   image: "/images/team/matias.jpg"
-  
-##Team members Admin##
-- name: Ann Therese Kjenes
-  background: Economics and Business Administration
-  role: Business manager
-  image: "/images/team/ann-therese.jpg"
-  
-- name: Emilie Udnæs
-  background: Electrical Engineering
-  role: Marketing manager
-  image: "/images/team/emilie.jpg"
 
-##Team members AI## 
-- name: Mikkel Antonsen
+- name: Niklas Molnes Hole
   background: Computer Science
-  role: "AI engineer"
-  group: "AI"
-  image: "/images/team/mikkel.jpg"
+  role: Web Developer
+  group: Marketing
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
 
-- name: Alexander Bakke
-  background: Computer Science
-  role: "AI engineer"
-  group: "AI"
-  image: "/images/team/alexander.jpg"
-
-- name: Nils Inge Rugsveen
-  background: Computer Science
-  role: "AI engineer"
-  group: "AI"
-  image: "/images/team/nils.jpg"
-
-##Team members Control##
-- name: Christian Wilhelmsen
-  background: Mechanical Engineering
-  role: "Mechanical engineer"
-  group: "Control"
-  image: "/images/team/christian.jpg"
-
-- name: Brage Eikanger
+- name: Simon Blindheim
   background: Cybernetics and Robotics
-  role: "Control engineer"
-  group: "Control"
-  image: "/images/team/brage.jpg"
+  role: Head of Economics
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
 
-- name: Stein-Inge Torset Øien
+- name: Vebjørn Isaksen
   background: Cybernetics and Robotics
-  role: "Control engineer"
-  group: "Perception"
-  image: "/images/team/stein-inge.jpg"
+  role: Deputy Project Manager
+  group: Marketing
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
 
-##Team members Perception
-- name: Thomas Rostrup Andersen
+## Team Control ##
+- name: Martin Sollie
   background: Cybernetics and Robotics
-  role: "Perception engineer"
-  group: "Perception"
-  image: "/images/team/thomas.jpg"
+  role: Control Leader
+  role: Control
+  image: "/images/team/martin.jpg"
 
+- name: Fredrik Opeide
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Håvard Skåra Mellbye
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Roy Angelsen
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+## Team Perception ##
 - name: Håkon Flatval
   background: Computer Science
-  role: "Perception engineer"
-  group: "Perception"
+  role: Perception Leader
+  group: Perception
   image: "/images/team/hakon.jpg"
+
+- name: Ivar Thokle Hovden
+  background: Computer Science
+  role: Perception Member
+  group: Perception
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Markus Pike
+  background: Computer Science
+  role: Perception Member
+  group: Perception
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Rune Nordmo
+  background: Cybernetics and Robotics
+  role: Perception Member
+  group: Perception
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Simen Haugo
+  background: Cybernetics and Robotics
+  role: Perception Member
+  group: Perception
+  image: "/images/team/simen.jpg"
+
+## Team Planning ##
+- name: Rasmus Munter
+  background: Applied Mathematics
+  role: Planning Member
+  group: Planning
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Vilde Gjærum
+  background: Cybernetics and Robotics
+  role: Planning Member
+  group: Planning
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+## Team System ##
+- name: Christian Wilhelmsen
+  background: Mechanical Engineering
+  role: System Leader
+  group: System
+  image: "/images/team/christian.jpg"
+
+- name: Hans Theodor Johnsen
+  background: Mechanical Engineering
+  role: System Member
+  group: System
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Patrick Sjåstad Langseth
+  background: Economics and Administration
+  role: System Member
+  group: System
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
