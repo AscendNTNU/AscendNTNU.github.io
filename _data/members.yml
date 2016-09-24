@@ -40,6 +40,12 @@
   role: Control
   image: "/images/team/martin.jpg"
 
+- name: Amine	Othmane
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
 - name: Fredrik Opeide
   background: Cybernetics and Robotics
   role: Control Member
