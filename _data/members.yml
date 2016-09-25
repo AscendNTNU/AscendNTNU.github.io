@@ -5,6 +5,12 @@
   group: Project
   image: "/images/team/brage.jpg"
 
+- name: Erling Solberg
+  background: Electrical Engineering
+  role: Sponsor Manager
+  group: Marketing
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
 - name: Emilie Udnæs
   background: Electrical Engineering
   role: Marketing Manager
@@ -77,6 +83,18 @@
   group: Perception
   image: "http://freelanceme.net/Images/default%20profile%20picture.png"
 
+- name: Erlend Eriksen
+  background: Cybernetics and Robotics
+  role: Perception Member
+  group: Perception
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Johan Wind
+  background: Applied Physics and Mathematics
+  role: Perception Member
+  group: Perception
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
 - name: Markus Pike
   background: Computer Science
   role: Perception Member
@@ -99,6 +117,18 @@
 - name: Magnus Reiersen
   background: Computer Science
   role: Planning Leader
+  group: Planning
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Adrian Tofting
+  background: Engineering and ICT
+  role: Planning Member
+  group: Planning
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Alexander Danielsen-Haces
+  background: Cybernetics and Robotics
+  role: Planning Member
   group: Planning
   image: "http://freelanceme.net/Images/default%20profile%20picture.png"
 
@@ -129,6 +159,12 @@
 
 - name: Patrick Sjåstad Langseth
   background: Economics and Administration
+  role: System Member
+  group: System
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
+- name: Per Kristian Pöcher
+  background: Cybernetics and Robotics
   role: System Member
   group: System
   image: "http://freelanceme.net/Images/default%20profile%20picture.png"
