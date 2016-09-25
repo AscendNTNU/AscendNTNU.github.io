@@ -96,6 +96,12 @@
   image: "/images/team/simen.jpg"
 
 ## Team Planning ##
+- name: Magnus Reiersen
+  background: Computer Science
+  role: Planning Leader
+  group: Planning
+  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+
 - name: Rasmus Munter
   background: Applied Mathematics
   role: Planning Member
