@@ -3,30 +3,30 @@
   background: Cybernetics and Robotics
   role: Project Manager
   group: Project
-  image: "/images/team/brage.jpg"
+  image: "/images/team-2017/brage-e-2017.jpg"
 
 - name: Erling Solberg
   background: Electrical Engineering
   role: Sponsor Manager
   group: Marketing
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/erling-s-2017.jpg"
 
 - name: Emilie Udnæs
   background: Electrical Engineering
   role: Marketing Manager
   group: Marketing
-  image: "/images/team/emilie.jpg"
+  image: "/images/team-2017/emilie-u-2017.jpg"
 
 - name: Matias Christensen
   background: Computer Science
   role: Chief Engineer
-  image: "/images/team/matias.jpg"
+  image: "/images/team-2017/matias-c-2017.jpg"
 
 - name: Niklas Molnes Hole
   background: Computer Science
   role: Web Developer
   group: Marketing
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/niklas-mh-2017.jpg"
 
 - name: Simon Blindheim
   background: Cybernetics and Robotics
@@ -44,13 +44,13 @@
   background: Cybernetics and Robotics
   role: Control Leader
   role: Control
-  image: "/images/team/martin.jpg"
+  image: "/images/team-2017/martin-s-2017.jpg"
 
 - name: Amine Othmane
   background: Cybernetics and Robotics
   role: Control Member
   role: Control
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/amine-o-2017.jpg"
 
 - name: Fredrik Opeide
   background: Cybernetics and Robotics
@@ -62,69 +62,69 @@
   background: Cybernetics and Robotics
   role: Control Member
   role: Control
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/havard-sm-2017.jpg"
 
 - name: Roy Angelsen
   background: Cybernetics and Robotics
   role: Control Member
   role: Control
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/roy-a-2017.jpg"
 
 ## Team Perception ##
 - name: Håkon Flatval
   background: Computer Science
   role: Perception Leader
   group: Perception
-  image: "/images/team/hakon.jpg"
+  image: "/images/team-2017/hakon-f-2017.jpg"
 
 - name: Ivar Thokle Hovden
   background: Computer Science
   role: Perception Member
   group: Perception
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/ivar-th-2017.jpg"
 
 - name: Erlend Eriksen
   background: Cybernetics and Robotics
   role: Perception Member
   group: Perception
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/erlend-e-2017.jpg"
 
 - name: Johan Wind
   background: Applied Physics and Mathematics
   role: Perception Member
   group: Perception
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/johan-w-2017.jpg"
 
 - name: Markus Pike
   background: Computer Science
   role: Perception Member
   group: Perception
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/markus-p-2017.jpg"
 
 - name: Rune Nordmo
   background: Cybernetics and Robotics
   role: Perception Member
   group: Perception
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/rune-n-2017.jpg"
 
 - name: Simen Haugo
   background: Cybernetics and Robotics
   role: Perception Member
   group: Perception
-  image: "/images/team/simen.jpg"
+  image: "/images/team-2017/simen-h-2017.jpg"
 
 ## Team Planning ##
 - name: Magnus Reiersen
   background: Computer Science
   role: Planning Leader
   group: Planning
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/magnus-r-2017.jpg"
 
 - name: Adrian Tofting
   background: Engineering and ICT
   role: Planning Member
   group: Planning
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/adrian-t-2017.jpg"
 
 - name: Alexander Danielsen-Haces
   background: Cybernetics and Robotics
@@ -142,14 +142,14 @@
   background: Cybernetics and Robotics
   role: Planning Member
   group: Planning
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/vilde-g-2017.jpg"
 
 ## Team System ##
 - name: Christian Wilhelmsen
   background: Mechanical Engineering
   role: System Leader
   group: System
-  image: "/images/team/christian.jpg"
+  image: "/images/team-2017/christian-w-2017.jpg"
 
 - name: Hans Theodor Johnsen
   background: Mechanical Engineering
@@ -161,10 +161,10 @@
   background: Economics and Administration
   role: System Member
   group: System
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/patrick-sl-2017.jpg"
 
 - name: Per Kristian Pöcher
   background: Cybernetics and Robotics
   role: System Member
   group: System
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/per-kp-2017.jpg"
