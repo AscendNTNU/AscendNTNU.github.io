@@ -31,13 +31,13 @@
 - name: Simon Blindheim
   background: Cybernetics and Robotics
   role: Head of Economics
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/simon-b-2017.jpg"
 
 - name: Vebjørn Isaksen
   background: Cybernetics and Robotics
   role: Deputy Project Manager
   group: Marketing
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/vebjorn-i-2017.jpg"
 
 ## Team Control ##
 - name: Martin Sollie
@@ -56,7 +56,7 @@
   background: Cybernetics and Robotics
   role: Control Member
   role: Control
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/fredrik-o-2017.jpg"
 
 - name: Håvard Skåra Mellbye
   background: Cybernetics and Robotics
@@ -130,7 +130,7 @@
   background: Cybernetics and Robotics
   role: Planning Member
   group: Planning
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/alexander-dh-2017.jpg"
 
 - name: Rasmus Munter
   background: Applied Mathematics
@@ -155,7 +155,7 @@
   background: Mechanical Engineering
   role: System Member
   group: System
-  image: "http://freelanceme.net/Images/default%20profile%20picture.png"
+  image: "/images/team-2017/hans-tj-2017.jpg"
 
 - name: Patrick Sjåstad Langseth
   background: Economics and Administration
