@@ -1,93 +1,170 @@
-##The board##
-
-- name: Johan Hatleskog
+## Admin ##
+- name: Brage Eikanger
   background: Cybernetics and Robotics
-  role: Project manager
-  image: "/images/team/johan.jpg"
+  role: Project Manager
+  group: Project
+  image: "/images/team-2017/brage-e-2017.jpg"
 
-- name: Tobias Stene Hansteen
-  background: Cybernetics and Robotics
-  role: Technical leader
-  image: "/images/team/tobias.jpg"
+- name: Erling Solberg
+  background: Electrical Engineering
+  role: Sponsor Manager
+  group: Marketing
+  image: "/images/team-2017/erling-s-2017.jpg"
 
-- name: Marius Maaland
-  background: Computer Science
-  role: Deputy project manager
-  image: "/images/team/marius.jpg"
-
-- name: Simen Haugo
-  background: Cybernetics and Robotics
-  role: Group leader AI
-  image: "/images/team/simen.jpg"
-
-- name: Martin Sollie
-  background: Cybernetics and Robotics
-  role: Group leader Control
-  image: "/images/team/martin.jpg"
+- name: Emilie Udnæs
+  background: Electrical Engineering
+  role: Marketing Manager
+  group: Marketing
+  image: "/images/team-2017/emilie-u-2017.jpg"
 
 - name: Matias Christensen
   background: Computer Science
-  role: Group leader Perception
-  image: "/images/team/matias.jpg"
-  
-##Team members Admin##
-- name: Ann Therese Kjenes
-  background: Economics and Business Administration
-  role: Business manager
-  image: "/images/team/ann-therese.jpg"
-  
-- name: Emilie Udnæs
-  background: Electrical Engineering
-  role: Marketing manager
-  image: "/images/team/emilie.jpg"
+  role: Chief Engineer
+  image: "/images/team-2017/matias-c-2017.jpg"
 
-##Team members AI## 
-- name: Mikkel Antonsen
+- name: Niklas Molnes Hole
   background: Computer Science
-  role: "AI engineer"
-  group: "AI"
-  image: "/images/team/mikkel.jpg"
+  role: Web Developer
+  group: Marketing
+  image: "/images/team-2017/niklas-mh-2017.jpg"
 
-- name: Alexander Bakke
-  background: Computer Science
-  role: "AI engineer"
-  group: "AI"
-  image: "/images/team/alexander.jpg"
-
-- name: Nils Inge Rugsveen
-  background: Computer Science
-  role: "AI engineer"
-  group: "AI"
-  image: "/images/team/nils.jpg"
-
-##Team members Control##
-- name: Christian Wilhelmsen
-  background: Mechanical Engineering
-  role: "Mechanical engineer"
-  group: "Control"
-  image: "/images/team/christian.jpg"
-
-- name: Brage Eikanger
+- name: Simon Blindheim
   background: Cybernetics and Robotics
-  role: "Control engineer"
-  group: "Control"
-  image: "/images/team/brage.jpg"
+  role: Head of Economics
+  image: "/images/team-2017/simon-b-2017.jpg"
 
-- name: Stein-Inge Torset Øien
+- name: Vebjørn Isaksen
   background: Cybernetics and Robotics
-  role: "Control engineer"
-  group: "Perception"
-  image: "/images/team/stein-inge.jpg"
+  role: Deputy Project Manager
+  group: Marketing
+  image: "/images/team-2017/vebjorn-i-2017.jpg"
 
-##Team members Perception
-- name: Thomas Rostrup Andersen
+## Team Control ##
+- name: Martin Sollie
   background: Cybernetics and Robotics
-  role: "Perception engineer"
-  group: "Perception"
-  image: "/images/team/thomas.jpg"
+  role: Control Leader
+  role: Control
+  image: "/images/team-2017/martin-s-2017.jpg"
 
+- name: Amine Othmane
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "/images/team-2017/amine-o-2017.jpg"
+
+- name: Fredrik Opeide
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "/images/team-2017/fredrik-o-2017.jpg"
+
+- name: Håvard Skåra Mellbye
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "/images/team-2017/havard-sm-2017.jpg"
+
+- name: Roy Angelsen
+  background: Cybernetics and Robotics
+  role: Control Member
+  role: Control
+  image: "/images/team-2017/roy-a-2017.jpg"
+
+## Team Perception ##
 - name: Håkon Flatval
   background: Computer Science
-  role: "Perception engineer"
-  group: "Perception"
-  image: "/images/team/hakon.jpg"
+  role: Perception Leader
+  group: Perception
+  image: "/images/team-2017/hakon-f-2017.jpg"
+
+- name: Ivar Thokle Hovden
+  background: Computer Science
+  role: Perception Member
+  group: Perception
+  image: "/images/team-2017/ivar-th-2017.jpg"
+
+- name: Erlend Eriksen
+  background: Cybernetics and Robotics
+  role: Perception Member
+  group: Perception
+  image: "/images/team-2017/erlend-e-2017.jpg"
+
+- name: Johan Wind
+  background: Applied Physics and Mathematics
+  role: Perception Member
+  group: Perception
+  image: "/images/team-2017/johan-w-2017.jpg"
+
+- name: Markus Pike
+  background: Computer Science
+  role: Perception Member
+  group: Perception
+  image: "/images/team-2017/markus-p-2017.jpg"
+
+- name: Rune Nordmo
+  background: Cybernetics and Robotics
+  role: Perception Member
+  group: Perception
+  image: "/images/team-2017/rune-n-2017.jpg"
+
+- name: Simen Haugo
+  background: Cybernetics and Robotics
+  role: Perception Member
+  group: Perception
+  image: "/images/team-2017/simen-h-2017.jpg"
+
+## Team Planning ##
+- name: Magnus Reiersen
+  background: Computer Science
+  role: Planning Leader
+  group: Planning
+  image: "/images/team-2017/magnus-r-2017.jpg"
+
+- name: Adrian Tofting
+  background: Engineering and ICT
+  role: Planning Member
+  group: Planning
+  image: "/images/team-2017/adrian-t-2017.jpg"
+
+- name: Alexander Danielsen-Haces
+  background: Cybernetics and Robotics
+  role: Planning Member
+  group: Planning
+  image: "/images/team-2017/alexander-dh-2017.jpg"
+
+- name: Rasmus Munter
+  background: Applied Mathematics
+  role: Planning Member
+  group: Planning
+  image: "/images/team-2017/rasmus-m-2017.jpg"
+
+- name: Vilde Gjærum
+  background: Cybernetics and Robotics
+  role: Planning Member
+  group: Planning
+  image: "/images/team-2017/vilde-g-2017.jpg"
+
+## Team System ##
+- name: Christian Wilhelmsen
+  background: Mechanical Engineering
+  role: System Leader
+  group: System
+  image: "/images/team-2017/christian-w-2017.jpg"
+
+- name: Hans Theodor Johnsen
+  background: Mechanical Engineering
+  role: System Member
+  group: System
+  image: "/images/team-2017/hans-tj-2017.jpg"
+
+- name: Patrick Sjåstad Langseth
+  background: Economics and Administration
+  role: System Member
+  group: System
+  image: "/images/team-2017/patrick-sl-2017.jpg"
+
+- name: Per Kristian Pöcher
+  background: Cybernetics and Robotics
+  role: System Member
+  group: System
+  image: "/images/team-2017/per-kp-2017.jpg"
