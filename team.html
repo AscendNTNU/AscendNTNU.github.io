@@ -20,7 +20,7 @@ permalink: /team/
 					 <p><b>{{member.name}}</b></p>
 					 <p>{{member.background}}</p>
 					 <p>{{member.role}}</p>
-					 <p><a href={{'mailto:' + member.mail}} onmouseover="this.href=this.href.replace(/\[at\]/g, '@')">{{member.mail}}</a></p>
+					 <p><a href={{member.mail}} onmouseover="this.href='mailto:'+this.href.replace(/^mailto:/, '').replace(/\[at\]/g, '@')">{{member.mail}}</a></p>
 				 </dd>
 				</dl>
 				{% endfor%}
