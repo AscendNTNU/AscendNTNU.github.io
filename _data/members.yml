@@ -15,7 +15,7 @@
 
 - name: Emilie Udnæs
   background: Electrical Engineering
-  role: Marketing Manager
+  role: Communication Leader
   group: Marketing
   image: "/images/team-2017/emilie-u-2017.jpg"
   mail: "emilie.udnaes[at]ascendntnu.no"
@@ -50,35 +50,35 @@
 - name: Martin Sollie
   background: Cybernetics and Robotics
   role: Control Leader
-  role: Control
+  group: Control
   image: "/images/team-2017/martin-s-2017.jpg"
   mail: "martin.sollie[at]ascendntnu.no"
 
 - name: Amine Othmane
   background: Cybernetics and Robotics
   role: Control Member
-  role: Control
+  group: Control
   image: "/images/team-2017/amine-o-2017.jpg"
   mail: "amine.othmane[at]hotmail.fr"
 
 - name: Fredrik Opeide
   background: Cybernetics and Robotics
   role: Control Member
-  role: Control
+  group: Control
   image: "/images/team-2017/fredrik-o-2017.jpg"
   mail: "fredrik.opeide[at]ascendntnu.no"
 
 - name: Håvard Skåra Mellbye
   background: Cybernetics and Robotics
   role: Control Member
-  role: Control
+  group: Control
   image: "/images/team-2017/havard-sm-2017.jpg"
   mail: "havard.mellbye[at]ascendntnu.no"
 
 - name: Roy Angelsen
   background: Cybernetics and Robotics
   role: Control Member
-  role: Control
+  group: Control
   image: "/images/team-2017/roy-a-2017.jpg"
   mail: "roy.angelsen[at]ascendntnu.no"
 
