@@ -5,7 +5,7 @@ permalink: /about/
 ---
 Ascend NTNU is a non-profit student organization created to represent the [Norwegian University Of Science and Technology][NTNU] (NTNU) in the [International Aerial Robotics Competition][IARC]. 
 
-Ascend was founded during the spring of 2015, and we plan on attending our first competition in 2016.
+Ascend was founded during the spring of 2015. In 2016 we competed and became third in IARC. We are now, again, preparing for a new competition in 2017.
 
 ### Contact us
 Send an email to [hi@ascendntnu.no](mailto:hi@ascendntnu.no), and we'll get back to you.
