@@ -15,6 +15,7 @@ title: Home
     top: 0;
     background: #333;
     height: 100vh;
+    cursor: pointer;
   }
   #timer-container:before {
     content: "";
@@ -30,20 +31,23 @@ title: Home
     z-index: -1;
     border-right-width: 50vw;
   }
+  #timer {
+    margin-bottom: 28px;
+  }
 </style>
 <div id="timer-container">
-  <p>The unveiling of a new webpage in</p>
+  <p>The unveiling of a new webpage the 29th of January 2017!</p>
   <h1 id="timer"></h1>
   <p>Click to go back to frontpage...</p>
   <script>
     let timer = document.querySelector('#timer')
     let timerContainer = document.querySelector('#timer-container')
     function dd(d){ return ('0' + d).slice(-2) }
-    if (new Date(2017,0,29,23,0,0) < Date.now()) timerContainer.style.display = 'none'
-    let d = new Date(new Date(2017,0,29,23,0,0)-Date.now())
+    if (new Date(2017,0,29,13,0,0) < Date.now()) timerContainer.style.display = 'none'
+    let d = new Date(new Date(2017,0,29,13,0,0)-Date.now())
     timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
     setInterval(function () {
-      let d = new Date(new Date(2017,0,29,23,0,0)-Date.now())
+      let d = new Date(new Date(2017,0,29,13,0,0)-Date.now())
       timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
     }, 1000)
     timerContainer.addEventListener('click', function () { timerContainer.style.display = 'none' })
