@@ -40,6 +40,8 @@ title: Home
     let timerContainer = document.querySelector('#timer-container')
     function dd(d){ return ('0' + d).slice(-2) }
     if (new Date(2017,0,29,23,0,0) < Date.now()) timerContainer.style.display = 'none'
+    let d = new Date(new Date(2017,0,29,23,0,0)-Date.now())
+    timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
     setInterval(function () {
       let d = new Date(new Date(2017,0,29,23,0,0)-Date.now())
       timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
