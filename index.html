@@ -2,11 +2,50 @@
 layout: default
 title: Home
 ---
-<div style="display:none;">
+<style>
+  #timer-container {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 222222;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    background: #333;
+    height: 100vh;
+  }
+  #timer-container:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 50vh solid #222;
+    border-left-color: #333;
+    border-top-color: #333;
+    border-left-width: 50vw;
+    z-index: -1;
+    border-right-width: 50vw;
+  }
+</style>
+<div id="timer-container">
   <p>The unveiling of a new webpage in</p>
   <h1 id="timer"></h1>
   <p>Click to go back to frontpage...</p>
-  <script>let timer = document.querySelector("#timer");setInterval(function () {let d = new Date();timer.innerText=d.toString()}, 1000)</script>
+  <script>
+    let timer = document.querySelector('#timer')
+    let timerContainer = document.querySelector('#timer-container')
+    function dd(d){ return ('0' + d).slice(-2) }
+    if (new Date(2017,0,29,23,0,0) < Date.now()) timerContainer.style.display = 'none'
+    setInterval(function () {
+      let d = new Date(new Date(2017,0,29,23,0,0)-Date.now())
+      timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
+    }, 1000)
+    timerContainer.addEventListener('click', function () { timerContainer.style.display = 'none' })
+  </script>
 </div>
 <section class="page-head"> 
   <div class="container"> 
