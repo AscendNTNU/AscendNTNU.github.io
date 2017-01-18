@@ -78,9 +78,10 @@ title: Home
             }
           }, 8000)
           clearInterval(interval)
+        } else {
+          let d = new Date(time)
+          timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
         }
-        let d = new Date(time)
-        timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
       }, 1000)
     }
     timerContainer.addEventListener('click', function () {
