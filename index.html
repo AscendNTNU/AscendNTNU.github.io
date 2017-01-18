@@ -62,11 +62,11 @@ title: Home
                          "We will just wait some seconds more..", "",
                          "Just like a windows update..", "Only faster.",
                          "The build should be done in..", "Ready?",
-                         "10 hours! JK, again. Refreshing in 5 sec!", ""
+                         "10 hours!", "JK, again. Refreshing in 5 sec!"
                         ]
           timerTitle.style.display = 'none'
           var newInterval = setInterval(function () {
-            if (count >= content.length) {
+            if (count * 2 >= content.length) {
               window.location.reload(true)
               clearInterval(newInterval)
             } else {
