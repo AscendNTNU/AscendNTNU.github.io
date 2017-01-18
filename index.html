@@ -36,13 +36,14 @@ title: Home
   }
 </style>
 <div id="timer-container">
-  <p>The unveiling of a new webpage the 29th of January 2017!</p>
+  <p id="timer-title">The unveiling of a new webpage the 29th of January 2017!</p>
   <h1 id="timer"></h1>
   <p id="timer-description">Click to go back to frontpage...</p>
   <script>
     let timer = document.querySelector('#timer')
     let timerContainer = document.querySelector('#timer-container')
     let timerDesc = document.querySelector('#timer-description')
+    let timerTitle = document.querySelector('#timer-title')
     var baseDate = new Date(2017,0,29,12,0,0)
     function dd(d){ return ('0' + d).slice(-2) }
     if (baseDate < Date.now()) {
@@ -63,8 +64,9 @@ title: Home
                          "The build should be done in..", "Ready?",
                          "10 hours! JK, again. Refreshing in 5 sec!", ""
                         ]
+          timerTitle.style.display = 'none'
           var newInterval = setInterval(function () {
-            if (count + 1 >= content.length) {
+            if (count >= content.length) {
               window.location.reload(true)
               clearInterval(newInterval)
             } else {
@@ -72,7 +74,7 @@ title: Home
               timerDesc.innerText = content[count * 2 + 1]
             }
             count++
-          }, 5000)
+          }, 8000)
           clearInterval(interval)
         }
         let d = new Date(time)
