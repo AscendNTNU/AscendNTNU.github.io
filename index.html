@@ -38,19 +38,51 @@ title: Home
 <div id="timer-container">
   <p>The unveiling of a new webpage the 29th of January 2017!</p>
   <h1 id="timer"></h1>
-  <p>Click to go back to frontpage...</p>
+  <p id="timer-description">Click to go back to frontpage...</p>
   <script>
     let timer = document.querySelector('#timer')
     let timerContainer = document.querySelector('#timer-container')
+    let timerDesc = document.querySelector('#timer-description')
+    var baseDate = new Date(2017,0,29,12,0,0)
     function dd(d){ return ('0' + d).slice(-2) }
-    if (new Date(2017,0,29,13,0,0) < Date.now()) timerContainer.style.display = 'none'
-    let d = new Date(new Date(2017,0,29,13,0,0)-Date.now())
-    timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
-    setInterval(function () {
-      let d = new Date(new Date(2017,0,29,13,0,0)-Date.now())
+    if (baseDate < Date.now()) {
+      timerContainer.style.display = 'none'
+    } else {
+      document.body.style.overflow = 'hidden'
+      let d = new Date(baseDate-Date.now())
       timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
-    }, 1000)
-    timerContainer.addEventListener('click', function () { timerContainer.style.display = 'none' })
+      var interval = setInterval(function () {
+        let time = baseDate - Date.now()
+        if (time < 0) {
+          var count = 0
+          var content = ["Forget all you know about the real world...", "",
+                         "JK, it is just another website.", "Of a few billions..",
+                         "But it is one of the top 4% best on the web!", "As 96% is the dark web..",
+                         "We will just wait some seconds more..", "",
+                         "Just like a windows update..", "Only faster.",
+                         "The build should be done in..", "Ready?",
+                         "10 hours! JK, again. Refreshing in 5 sec!", ""
+                        ]
+          var newInterval = setInterval(function () {
+            if (count + 1 >= content.length) {
+              window.location.reload(true)
+              clearInterval(newInterval)
+            } else {
+              timer.innerText = content[count * 2]
+              timerDesc.innerText = content[count * 2 + 1]
+            }
+            count++
+          }, 5000)
+          clearInterval(interval)
+        }
+        let d = new Date(time)
+        timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
+      }, 1000)
+    }
+    timerContainer.addEventListener('click', function () {
+      timerContainer.style.display = 'none'
+      document.body.style.overflow = 'auto'
+    })
   </script>
 </div>
 <section class="page-head"> 
