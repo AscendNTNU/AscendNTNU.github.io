@@ -62,10 +62,13 @@ title: Home
                          "We will just wait some seconds more..", "",
                          "Just like a windows update..", "Only faster.",
                          "The build should be done in..", "Ready?",
-                         "10 hours!", "JK, again. Refreshing in 5 sec!"
+                         "10 hours!", "JK, again. Refreshing in 8 seconds!"
                         ]
           timerTitle.style.display = 'none'
+          timer.innerText = content[0]
+          timerDesc.innerText = content[1]
           var newInterval = setInterval(function () {
+            count++
             if (count * 2 >= content.length) {
               window.location.reload(true)
               clearInterval(newInterval)
@@ -73,7 +76,6 @@ title: Home
               timer.innerText = content[count * 2]
               timerDesc.innerText = content[count * 2 + 1]
             }
-            count++
           }, 8000)
           clearInterval(interval)
         }
