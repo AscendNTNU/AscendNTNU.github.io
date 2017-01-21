@@ -44,14 +44,15 @@ title: Home
     let timerContainer = document.querySelector('#timer-container')
     let timerDesc = document.querySelector('#timer-description')
     let timerTitle = document.querySelector('#timer-title')
-    var baseDate = new Date(2017,0,29,12,0,0)
+    var baseDate = new Date(2017,0,29,12,0,0) - 25*60*60*1000
     function dd(d){ return ('0' + d).slice(-2) }
     if (baseDate < Date.now()) {
       timerContainer.style.display = 'none'
     } else {
       document.body.style.overflow = 'hidden'
       let d = new Date(baseDate-Date.now())
-      timer.innerText = d.getDate() + ' days ' + dd(d.getHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
+      let days = Math.floor(d / (24*60*60*1000))
+      timer.innerText = days + ' days ' + dd(d.getUTCHours()) + 'h ' + dd(d.getMinutes()) + 'm ' + dd(d.getSeconds()) + 's'
       var interval = setInterval(function () {
         let time = baseDate - Date.now()
         if (time < 0) {
