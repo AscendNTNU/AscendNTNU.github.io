@@ -71,6 +71,7 @@ title: Home
           var newInterval = setInterval(function () {
             count++
             if (count * 2 >= content.length) {
+              window.open('https://ascendntnu.no', '_self')
               window.location.reload(true)
               clearInterval(newInterval)
             } else {
